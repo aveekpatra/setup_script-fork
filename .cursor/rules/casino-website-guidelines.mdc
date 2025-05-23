@@ -1,0 +1,44 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Casino Website Guidelines
+
+This document outlines specific guidelines for the online casino PPC website.
+
+## Content Structure
+
+- Use clear and compelling calls-to-action for promotional offers
+- Ensure all casino offers and bonuses are prominently displayed
+- Include responsible gambling information in the footer
+- Structure casino listings in a consistent, easy-to-compare format
+
+## Legal Compliance
+
+- Include age verification notices (18+ or 21+ depending on jurisdiction)
+- Display responsible gambling messages prominently
+- Include terms and conditions links for all promotional offers
+- Ensure all affiliate/promotional content is clearly labeled
+
+## SEO Guidelines
+
+- Use proper heading structure (H1, H2, H3) for casino content
+- Include relevant casino keywords in page titles and meta descriptions
+- Optimize image alt text for casino-related images
+- Ensure proper schema markup for casino offers and reviews
+
+## UX Guidelines
+
+- Make promotional buttons and offers highly visible
+- Ensure casino comparison tables are responsive on all devices
+- Use clear visual indicators for casino ratings and reviews
+- Implement easy navigation to different game categories
+- Ensure fast loading times for optimal conversion rates
+
+## Accessibility
+
+- Maintain sufficient color contrast for readability
+- Ensure all interactive elements are keyboard accessible
+- Provide text alternatives for non-text content
+- Make sure form elements have associated labels

@@ -1,0 +1,52 @@
+{
+    "Sircusbet": {
+        "img": "circusbet_logo.png",
+        "URL": "https://www.circusbet.fr/",
+        "Offer": "Up to 100% cashback"
+    },
+    "Bwin": {
+        "img": "",
+        "URL": "https://sports.bwin.fr/",
+        "Offer": "Up to €100 bonus"
+    },
+    "Betsson": {
+        "img": "bettson_logo.svg",
+        "URL": "https://www.betsson.com/",
+        "Offer": "Welcome bonus of €100 + €30 in Free Bets"
+    },
+    "Betclic": {
+        "img": "betclic_logo.svg",
+        "URL": "https://www.betclic.fr/",
+        "Offer": "Welcome bonus of up to €100"
+    },
+    "Olybet": {
+        "img": "olybet_logo.png",
+        "URL": "https://olybet.fr/",
+        "Offer": "Welcome bonus of €100"
+    },
+    "Genybet": {
+        "img": "genybet_logo.png",
+        "URL": "https://www.genybet.fr/",
+        "Offer": "Welcome bonus of €100"
+    },
+    "NetBet": {
+        "img": "netbet_logo.png",
+        "URL": "https://www.netbet.fr/",
+        "Offer": "Welcome bonus of €100"
+    },
+    "Unibet": {
+        "img": "unibet_logo.png",
+        "URL": "https://www.unibet.fr/sport",
+        "Offer": "1st sports bet up to €100 in free bet"
+    },
+    "Vbet": {
+        "img": "vbet_logo.svg",
+        "URL": "https://vbet.fr/",
+        "Offer": "Welcome bonus of €100"
+    },
+    "Winamax": {
+        "img": "winamax_logo.svg",
+        "URL": "https://www.winamax.fr/",
+        "Offer": "Up to €250 welcome bonus"
+    }
+}

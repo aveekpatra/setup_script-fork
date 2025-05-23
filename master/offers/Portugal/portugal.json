@@ -1,0 +1,88 @@
+{
+    "Betclic": {
+        "img": "betclic_logo.svg",
+        "URL": "https://www.betclic.pt",
+        "Offer": "50€ on first deposit"
+    },
+    "Bwin": {
+        "img": "bwin_logo.svg",
+        "URL": "https://www.bwin.pt ",
+        "Offer": "Up to €100 back as a FreeBet"
+    },
+    "ESCOnline": {
+        "img": "esconline_logo.svg",
+        "URL": "https://www.estorilsolcasinos.pt ",
+        "Offer": "100 Freespins, €10 Bonus, Poker ticket"
+    },
+    "PokerStars": {
+        "img": "pokerstars_logo.svg",
+        "URL": "https://www.pokerstars.pt",
+        "Offer": "100% bonus up to €500"
+    },
+    "Casino Portugal": {
+        "img": "casinoportugal_logo.svg",
+        "URL": "https://www.casinoportugal.pt/",
+        "Offer": "Depostit bonus €10"
+    },
+    "Casino Solverde": {
+        "img": "casinosolverd_logo.svg",
+        "URL": "https://www.solverde.pt",
+        "Offer": "25 free spins, €100, €30 free bets "
+    },
+    "Nossa Aposta": {
+        "img": "nossaaposta_logo.png",
+        "URL": "https://www.nossaaposta.pt ",
+        "Offer": "€700 bonus, 10% cashback"
+    },
+    "Placard.pt": {
+        "img": "placardpt_logo.svg",
+        "URL": "https://www.placard.pt",
+        "Offer": "€25 welcome bonus"
+    },
+    "Luckia": {
+        "img": "luckia_logo.svg",
+        "URL": "https://www.luckia.pt",
+        "Offer": "€5 + €500 bonus registration"
+    },
+    "888 Casino": {
+        "img": "888_logo.png",
+        "URL": "https://www.888.pt",
+        "Offer": "Up to €500 + 100 free spins"
+    },
+    "Betano": {
+        "img": "betano_logo.png",
+        "URL": "https://www.betano.pt",
+        "Offer": "100% up to €50 + €10 free bet"
+    },
+    "Moosh": {
+        "img": "moosh_logo.svg",
+        "URL": "https://www.moosh.pt",
+        "Offer": "Up to €50 free bet"
+    },
+    "Betwat": {
+        "img": "betway_logo.svg",
+        "URL": "https://www.betway.pt/",
+        "Offer": "Up to €50 deposit"
+    },
+    "Bidluck": {
+        "img": "bidluck_logo.png",
+        "URL": "https://www.bidluck.pt/",
+        "Offer": "€100 deposit bonus"
+    },
+    "Bacanaplay": {
+        "img": "bacanaplay_logo.svg",
+        "URL": "https://www.bacanaplay.pt",
+        "Offer": "Up to €100 bonus, 25 free spins"
+    },
+    "Lebull": {
+        "img": "lebull_logo.png",
+        "URL": "https://www.lebull.pt/",
+        "Offer": "€50 welcome bonus"
+    },
+    "GoldenPark": {
+        "img": "goldenpark_logo.svg",
+        "URL": "https://apostas.goldenpark.pt/",
+        "Offer": "€10 Free Bet or 50 Free Spins"
+    }
+    
+}

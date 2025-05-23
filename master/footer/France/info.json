@@ -1,0 +1,30 @@
+{
+    "anj": {
+        "image": "anj.png",
+        "url": "https://anj.fr/"
+    },
+    "jouns": {
+        "image": "jouns.png",
+        "url": "https://www.hippodromesenfete.fr/jouons-responsable/"
+    },
+    "+18": {
+        "image": "+18.png",
+        "url": ""
+    },
+    "arjel": {
+        "image": "arjel.png",
+        "url": "https://www.data.gouv.fr/en/organizations/autorite-de-regulation-des-jeux-en-ligne-arjel/"
+    },
+    "4rad": {
+        "image": "4rad.png",
+        "url": "https://www.gambleaware.org/"
+    },
+    "mediater": {
+        "image": "mediater.png",
+        "url": "https://mediateurdesjeuxenligne.fr/"
+    },
+    "begamble": {
+        "image": "begamble.png",
+        "url": "https://www.gambleaware.org/"
+    }
+} 

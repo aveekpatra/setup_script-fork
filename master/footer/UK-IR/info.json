@@ -1,0 +1,22 @@
+{
+    "18": {
+        "image": "18.png",
+        "url": ""
+    },
+    "begambleaware": {
+        "image": "begambleaware.png",
+        "url": "https://www.gambleaware.org/"
+    },
+    "gambling-commission": {
+        "image": "gambling-commission.png",
+        "url": "https://www.gamblingcommission.gov.uk/"
+    },
+    "gamstop": {
+        "image": "gamstop.png",
+        "url": "https://www.gamstop.co.uk/"
+    },
+    "gamcare": {
+        "image": "gamcare.png",
+        "url": "https://www.gamcare.org.uk/"
+    }
+} 

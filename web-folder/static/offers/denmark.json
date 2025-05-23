@@ -1,0 +1,27 @@
+{
+    "Expekt": {
+        "img": "expekt_logo.png",
+        "URL": "https://www.expekt.dk",
+        "Offer": "Welcome bonus 500 kr, first bet 100 kr"
+    },
+    "Betinia": {
+        "img": "betinia_logo.png",
+        "URL": "https://betinia.dk",
+        "Offer": "100% bonus of up to 1000 kr"
+    },
+    "Campo Bet": {
+        "img": "campobet_logo.png",
+        "URL": "https://campobet.com",
+        "Offer": "100% deposit bonus up to 500 kr"
+    },
+    "Netbet": {
+        "img": "netbet_logo.svg",
+        "URL": "https://www.netbet.com",
+        "Offer": "Welcome bonus up to 1000 kr"
+    },
+    "Bettson": {
+        "img": "bettson_logo.svg",
+        "URL": "https://www.betsson.com",
+        "Offer": "100% welcome bonus Up To 200 kr"
+    }
+}

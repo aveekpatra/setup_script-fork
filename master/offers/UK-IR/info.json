@@ -1,0 +1,57 @@
+{
+    "32red":{
+        "url": "https://www.32red.com",
+        "img": "32red_logo.png",
+        "offer": "Get 150% up to £150 on your first deposit!"
+    },
+    "highbet":{
+        "url": "https://www.highbet.co.uk/",
+        "img": "highbet_logo.png",
+        "offer": "Get 50 Free Spins on big bass splash"
+    },
+    "playojo":{
+        "url": "https://www.playojo.com",
+        "img": "playojo_logo.png",
+        "offer": "Get 50 Free Spins on 1st deposit"
+    },
+    "888 Casino":{
+        "url": "https://www.888casino.com/",
+        "img": "888_logo.png",
+        "offer": "100% up to 500£ Bonus + 100 Free Spins"
+    },
+    "kwiff":{
+        "url": "https://www.kwiff.com",
+        "img": "kwiff_logo.png",
+        "offer": "GET A £50 SURPRISE BET"
+    },
+    "plaza-royal":{
+        "url": "https://www.plazaroyal.com",
+        "img": "plaza-royal_logo.png",
+        "offer": "Welcome package 250 spins + up to 777£ Bonus"
+    },
+    "casinocasino":{
+        "url": "https://www.casinocasino.com",
+        "img": "casino-casino_logo.png",
+        "offer": "100% Bonus up to €/£100!"
+    },
+    "magic-red-casino":{
+        "url": "https://www.magicred.com",
+        "img": "magic-red-casino_logo.png",
+        "offer": "100% up to £100 + 20 spins"
+    },
+    "allBritishCasino":{
+        "url": "https://www.allbritishcasino.com/en/index",
+        "img": "allB-white_logo.png",
+        "offer": "Get 100% up to £100 + ALWAYS 10% CASHBACK"
+    },
+    "pub-casino":{
+        "url": "https://www.pubcasino.co.uk/en/index",
+        "img": "pub-casino_logo.png",
+        "offer": "100% up to £100"
+    },
+    "nrg-casino":{
+        "url": "https://nrg.bet/casino",
+        "img": "nrg_logo.jpg",
+        "offer": "Wager 250£ + on selected slots and get 50 FREE SPINS!"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "18": {
+        "image": "18.png",
+        "url": ""
+    },
+    "gamcare": {
+        "image": "gamcare.png",
+        "url": "https://www.gambleaware.org/"
+    },
+    "egba": {
+        "image": "egba.svg",
+        "url": "https://www.egba.eu/"
+    },
+    "srij": {
+        "image": "srij.svg",
+        "url": "https://www.srij.turismodeportugal.pt/pt"
+    },
+    "sicard": {
+        "image": "sicard.svg",
+        "url": "https://www.sicad.pt/"
+    },
+    "gambleaware": {
+        "image": "gambleaware.png",
+        "url": "https://www.gambleaware.org/"
+    }
+} 

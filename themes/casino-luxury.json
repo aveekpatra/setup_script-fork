@@ -1,0 +1,17 @@
+{
+  "name": "casino-luxury",
+  "description": "Luxury gold and black theme",
+  "colors": {
+    "primary": "#ffd700",
+    "secondary": "#000000",
+    "accent": "#ff0000",
+    "background": "#1a1a1a",
+    "surface": "#2a2a2a",
+    "text": "#ffffff",
+    "text-secondary": "#cccccc"
+  },
+  "typography": {
+    "font-primary": "Playfair Display, serif",
+    "font-display": "Cinzel, serif"
+  }
+}

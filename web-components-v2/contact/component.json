@@ -1,0 +1,94 @@
+{
+  "name": "contact",
+  "description": "Professional contact sections for casino comparison site",
+  "category": "content",
+  "version": "1.0.0",
+  "variants": [
+    {
+      "name": "comprehensive",
+      "description": "Full-featured contact form with all options",
+      "theme": "modern",
+      "html": "comprehensive.html",
+      "css": "comprehensive.css",
+      "js": "comprehensive.js"
+    },
+    {
+      "name": "minimal",
+      "description": "Clean, minimal contact form design",
+      "theme": "minimal",
+      "html": "minimal.html",
+      "css": "minimal.css",
+      "js": "minimal.js"
+    },
+    {
+      "name": "support",
+      "description": "Customer support focused contact section",
+      "theme": "modern",
+      "html": "support.html",
+      "css": "support.css",
+      "js": "support.js"
+    },
+    {
+      "name": "location",
+      "description": "Location and office information focused",
+      "theme": "luxury",
+      "html": "location.html",
+      "css": "location.css",
+      "js": "location.js"
+    },
+    {
+      "name": "social",
+      "description": "Social media and community focused contact",
+      "theme": "neon",
+      "html": "social.html",
+      "css": "social.css",
+      "js": "social.js"
+    },
+    {
+      "name": "business",
+      "description": "Business inquiry and partnership focused",
+      "theme": "luxury",
+      "html": "business.html",
+      "css": "business.css",
+      "js": "business.js"
+    },
+    {
+      "name": "emergency",
+      "description": "24/7 emergency support contact section",
+      "theme": "modern",
+      "html": "emergency.html",
+      "css": "emergency.css",
+      "js": "emergency.js"
+    },
+    {
+      "name": "chat",
+      "description": "Live chat and instant messaging focused",
+      "theme": "neon",
+      "html": "chat.html",
+      "css": "chat.css",
+      "js": "chat.js"
+    },
+    {
+      "name": "feedback",
+      "description": "Feedback and suggestions collection",
+      "theme": "minimal",
+      "html": "feedback.html",
+      "css": "feedback.css",
+      "js": "feedback.js"
+    },
+    {
+      "name": "partnership",
+      "description": "Partnership and collaboration inquiries",
+      "theme": "vintage",
+      "html": "partnership.html",
+      "css": "partnership.css",
+      "js": "partnership.js"
+    }
+  ],
+  "dependencies": [],
+  "casino_compliance": {
+    "age_verification": true,
+    "responsible_gambling": true,
+    "legal_notices": true
+  }
+}

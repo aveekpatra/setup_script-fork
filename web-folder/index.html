@@ -1,223 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino Website</title>
+    <title>Professional Casino Website</title>
+    <meta name="description" content="Experience the best online casino games">
     <link rel="stylesheet" href="css/styles.css">
-    <meta name="description" content="The best online casino games and bonuses">
-    <meta name="author" content="Casino Website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- Header Section -->
-    <header id="header-1" class="modern-header header-1">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="#" class="logo-link">
-                        <i data-lucide="dice-6" class="logo-icon"></i>
-                        <span class="logo-text">CasinoPro</span>
-                    </a>
-                </div>
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="#" class="nav-link active">Home</a></li>
-                        <li><a href="#" class="nav-link">Games</a></li>
-                        <li><a href="#" class="nav-link">Promotions</a></li>
-                        <li><a href="#" class="nav-link">VIP</a></li>
-                        <li><a href="#" class="nav-link">Support</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="#" class="cta-button">Join Now</a>
-                </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <!-- Header Component Start -->
+    <header class="casino-header modern-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <div class="logo-icon">
+                        <span class="icon-diamond">💎</span>
+                        <span class="icon-glow"></span>
+                    </div>
+                    <span class="logo-text">CasinoPro</span>
+                </a>
             </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero-9" class="modern-hero hero-9">
-        <div class="tournament-bg">
-            <div class="spotlight"></div>
-            <div class="competition-elements">
-                <div class="trophy-icon">🏆</div>
-                <div class="medal-icon">🥇</div>
-                <div class="star-icon">⭐</div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active" data-section="casino">Casino</a></li>
+                    <li><a href="#" class="nav-link" data-section="sports">Sports</a></li>
+                    <li><a href="#" class="nav-link" data-section="live">Live</a></li>
+                    <li><a href="#" class="nav-link" data-section="promotions">Promotions</a></li>
+                    <li><a href="#" class="nav-link" data-section="vip">VIP Club</a></li>
+                </ul>
+                <div class="nav-indicator"></div>
+            </nav>
+            <div class="header-actions">
+                <div class="balance-display">
+                    <span class="balance-label">Balance:</span>
+                    <span class="balance-amount">$2,450.00</span>
+                </div>
+                <a href="#" class="btn btn-primary">Join Now</a>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="tournament-header">
-                    <span class="tournament-badge">LIVE TOURNAMENT</span>
-                    <h1 class="hero-title">
-                        Weekly Casino <br>
-                        <span class="tournament-text">Championship</span>
-                    </h1>
-                </div>
-                <div class="prize-pool">
-                    <span class="pool-label">Total Prize Pool</span>
-                    <span class="pool-amount">$250,000</span>
-                </div>
-                <div class="tournament-info">
-                    <div class="info-item">
-                        <i class="fas fa-users"></i>
-                        <span>2,847 Players Registered</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Ends in 5 days</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-trophy"></i>
-                        <span>Top 100 Winners</span>
-                    </div>
-                </div>
-                <div class="leaderboard-preview">
-                    <h3>Current Leaders</h3>
-                    <div class="leader-list">
-                        <div class="leader">
-                            <span class="rank">#1</span>
-                            <span class="name">CasinoKing</span>
-                            <span class="score">1,250,500 pts</span>
-                        </div>
-                        <div class="leader">
-                            <span class="rank">#2</span>
-                            <span class="name">LuckyQueen</span>
-                            <span class="score">1,180,750 pts</span>
-                        </div>
-                        <div class="leader">
-                            <span class="rank">#3</span>
-                            <span class="name">SlotMaster</span>
-                            <span class="score">1,045,200 pts</span>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</header>
+    <!-- Hero Component Start -->
+    <section class="casino-hero welcome-hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Win Big at <span class="highlight">CasinoPro</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the thrill of premium casino games with massive payouts.
+                </p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-tournament">Join Tournament</a>
-                    <a href="#" class="btn-outline-light">View Full Leaderboard</a>
+                    <a href="#" class="btn btn-primary btn-large">Play Now</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="feature-display">
+                    <span class="feature-label">Welcome Bonus</span>
+                    <span class="feature-value">500% + 200 Spins</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+    <!-- Hero Component End -->
 
-    <!-- Content will be added by the import_components function -->
+    <!-- Header Component End -->
 
-    <script src="scripts/main.js"></script>
+    <!-- Components will be inserted here -->
+    
+    <!-- About Component Start -->
+    <section class="about about--story" id="about">
+    <div class="container">
 
-    <!-- Footer Section -->
-    <footer id="footer-4" class="modern-footer footer-4">
-        <div class="neon-bg"></div>
-        <div class="container">
-            <div class="footer-gaming-stats">
-                <div class="stat-item">
-                    <span class="stat-number">1.2M+</span>
-                    <span class="stat-label">Active Players</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">$50M+</span>
-                    <span class="stat-label">Total Winnings</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Casino Games</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support</span>
+        <!-- Story Header -->
+        <header class="about__header">
+            <div class="header-content">
+                <span class="about__eyebrow">Our Story</span>
+                <h2 class="about__title">The Journey That Changed Casino Comparison Forever</h2>
+                <p class="about__subtitle">
+                    From a simple idea to help one friend choose the right casino,
+                    we've grown into the most trusted platform in the industry.
+                </p>
+            </div>
+            <div class="header-visual">
+                <div class="story-hero">
+                    <div class="story-hero__image">
+                        <div class="image-placeholder">
+                            <span class="image-icon">🎯</span>
+                        </div>
+                    </div>
+                    <div class="story-hero__quote">
+                        "Every great platform starts with a simple problem that needs solving."
+                        <cite>— Sarah Chen, Founder & CEO</cite>
+                    </div>
                 </div>
             </div>
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <i class="fas fa-bolt"></i>
-                        <span>Neon Casino</span>
+        </header>
+
+        <!-- Timeline Section -->
+        <div class="about__timeline">
+            <h3 class="timeline__title">Our Journey Through Time</h3>
+
+            <div class="timeline">
+
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2018</span>
+                        <div class="timeline-dot"></div>
                     </div>
-                    <p class="neon-tagline">Feel the electric thrill of winning</p>
-                    <div class="download-app">
-                        <span>Download Our App:</span>
-                        <div class="app-buttons">
-                            <a href="#" class="app-btn">
-                                <i class="fab fa-apple"></i>
-                                <span>iOS</span>
-                            </a>
-                            <a href="#" class="app-btn">
-                                <i class="fab fa-android"></i>
-                                <span>Android</span>
-                            </a>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">The Beginning</h4>
+                        <p class="timeline-description">
+                            Sarah Chen, frustrated by misleading casino reviews, started researching
+                            and documenting legitimate online casinos for her friends. What began as
+                            a simple spreadsheet would become something much bigger.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">Founder</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50</span>
+                                <span class="stat-label">Casinos Researched</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-game-grid">
-                    <div class="game-category">
-                        <h4><i class="fas fa-dice"></i> Slots</h4>
-                        <ul>
-                            <li><a href="#">Video Slots</a></li>
-                            <li><a href="#">3D Slots</a></li>
-                            <li><a href="#">Megaways</a></li>
-                            <li><a href="#">Progressive</a></li>
-                        </ul>
+
+                <div class="timeline-item" data-year="2019">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2019</span>
+                        <div class="timeline-dot"></div>
                     </div>
-                    <div class="game-category">
-                        <h4><i class="fas fa-spade"></i> Table Games</h4>
-                        <ul>
-                            <li><a href="#">Blackjack</a></li>
-                            <li><a href="#">Roulette</a></li>
-                            <li><a href="#">Baccarat</a></li>
-                            <li><a href="#">Craps</a></li>
-                        </ul>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">First Website Launch</h4>
+                        <p class="timeline-description">
+                            The simple spreadsheet evolved into a basic website. Word spread
+                            quickly through gambling forums and social media. Players finally
+                            had a trusted source for unbiased casino information.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">5K</span>
+                                <span class="stat-label">Monthly Users</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100</span>
+                                <span class="stat-label">Casinos Listed</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="game-category">
-                        <h4><i class="fas fa-video"></i> Live Casino</h4>
-                        <ul>
-                            <li><a href="#">Live Blackjack</a></li>
-                            <li><a href="#">Live Roulette</a></li>
-                            <li><a href="#">Live Baccarat</a></li>
-                            <li><a href="#">Game Shows</a></li>
-                        </ul>
+                </div>
+
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2020</span>
+                        <div class="timeline-dot"></div>
                     </div>
-                    <div class="game-category">
-                        <h4><i class="fas fa-trophy"></i> Tournaments</h4>
-                        <ul>
-                            <li><a href="#">Daily Tournaments</a></li>
-                            <li><a href="#">Weekly Championships</a></li>
-                            <li><a href="#">Monthly Leaderboards</a></li>
-                            <li><a href="#">Special Events</a></li>
-                        </ul>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Team Expansion</h4>
+                        <p class="timeline-description">
+                            During the global shift to online entertainment, our platform saw
+                            unprecedented growth. We brought on industry experts, former casino
+                            employees, and data analysts to enhance our review process.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Team Members</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100K</span>
+                                <span class="stat-label">Monthly Users</span>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="timeline-item" data-year="2021">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2021</span>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Advanced Rating System</h4>
+                        <p class="timeline-description">
+                            We developed our proprietary 50-point rating system, incorporating
+                            real player feedback, safety scores, and comprehensive testing.
+                            This became the industry standard for casino evaluation.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">50</span>
+                                <span class="stat-label">Rating Criteria</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">300</span>
+                                <span class="stat-label">Casinos Reviewed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2022</span>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Industry Recognition</h4>
+                        <p class="timeline-description">
+                            Our platform received the "Excellence in Consumer Protection" award
+                            from the International Gaming Association. Major publications began
+                            citing our reviews as the gold standard.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Industry Awards</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1M</span>
+                                <span class="stat-label">Monthly Users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item--current" data-year="2024">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2024</span>
+                        <div class="timeline-dot timeline-dot--current"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Leading the Future</h4>
+                        <p class="timeline-description">
+                            Today, we're the most trusted name in casino comparison, serving
+                            over 2 million users monthly. We continue innovating with AI-powered
+                            recommendations and enhanced player protection features.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">2M+</span>
+                                <span class="stat-label">Monthly Users</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Casinos Reviewed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Impact Section -->
+        <div class="about__impact">
+            <h3 class="impact__title">Our Impact on the Industry</h3>
+            <div class="impact-grid">
+
+                <div class="impact-item">
+                    <div class="impact-icon">💡</div>
+                    <h4 class="impact-title">Transparency Revolution</h4>
+                    <p class="impact-description">
+                        We pioneered transparent review methodologies, forcing the entire
+                        industry to be more honest about their evaluation processes.
+                    </p>
+                </div>
+
+                <div class="impact-item">
+                    <div class="impact-icon">🛡️</div>
+                    <h4 class="impact-title">Player Protection</h4>
+                    <p class="impact-description">
+                        Our safety-first approach has helped millions of players avoid
+                        rogue casinos and make informed gambling decisions.
+                    </p>
+                </div>
+
+                <div class="impact-item">
+                    <div class="impact-icon">📊</div>
+                    <h4 class="impact-title">Data-Driven Standards</h4>
+                    <p class="impact-description">
+                        We established the first comprehensive, data-driven rating system
+                        that considers over 50 different criteria for each casino.
+                    </p>
+                </div>
+
+                <div class="impact-item">
+                    <div class="impact-icon">🏆</div>
+                    <h4 class="impact-title">Industry Leadership</h4>
+                    <p class="impact-description">
+                        Our reviews are now cited by gambling regulators, industry publications,
+                        and consumer protection agencies worldwide.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Values & Mission -->
+        <div class="about__mission">
+            <div class="mission-content">
+                <h3 class="mission__title">Why We Do What We Do</h3>
+                <div class="mission-text">
+                    <p>
+                        Our mission has never changed: to provide honest, comprehensive, and
+                        accessible information that helps players make safe and informed decisions
+                        about online gambling.
+                    </p>
+                    <p>
+                        We believe every player deserves to know exactly what they're getting
+                        into before they deposit a single dollar. That's why we test every aspect
+                        of every casino we review, from game fairness to customer support responsiveness.
+                    </p>
+                    <p>
+                        The gambling industry can be complex and sometimes predatory. We're here
+                        to level the playing field by giving players the knowledge they need to
+                        protect themselves and find the best possible gaming experience.
+                    </p>
+                </div>
+                <div class="mission-cta">
+                    <button class="btn btn-primary">Read Our Methodology</button>
+                    <button class="btn btn-secondary">See Our Latest Reviews</button>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-legal">
-                    <p>&copy; 2024 Neon Casino. All rights reserved. Licensed by the Malta Gaming Authority.</p>
-                    <div class="legal-links">
-                        <a href="#">Terms</a>
-                        <a href="#">Privacy</a>
-                        <a href="#">Cookies</a>
-                        <a href="#">Responsible Gaming</a>
+            <div class="mission-visual">
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <span class="mission-stat__number" data-count="2000000">0</span>
+                        <span class="mission-stat__label">Players Helped</span>
                     </div>
-                </div>
-                <div class="responsible-gaming">
-                    <div class="age-restriction">
-                        <span class="age-badge neon">18+</span>
-                        <span>Gamble Responsibly</span>
+                    <div class="mission-stat">
+                        <span class="mission-stat__number" data-count="500">0</span>
+                        <span class="mission-stat__label">Casinos Reviewed</span>
                     </div>
-                    <div class="help-organizations">
-                        <a href="#" class="help-link">GamCare</a>
-                        <a href="#" class="help-link">BeGambleAware</a>
+                    <div class="mission-stat">
+                        <span class="mission-stat__number" data-count="50">0</span>
+                        <span class="mission-stat__label">Rating Criteria</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="mission-stat__number" data-count="99">0</span>
+                        <span class="mission-stat__label">% Accuracy Rate</span>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
 
+        <!-- Team Preview -->
+        <div class="about__team-preview">
+            <h3 class="team-preview__title">Meet the People Behind the Platform</h3>
+            <div class="team-grid">
+
+                <div class="team-member">
+                    <div class="team-member__avatar">
+                        <span class="avatar-placeholder">SC</span>
+                    </div>
+                    <div class="team-member__info">
+                        <h4 class="team-member__name">Sarah Chen</h4>
+                        <p class="team-member__role">Founder & CEO</p>
+                        <p class="team-member__bio">
+                            Former casino auditor with 15 years of industry experience.
+                            Passionate about player protection and transparency.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-member__avatar">
+                        <span class="avatar-placeholder">MR</span>
+                    </div>
+                    <div class="team-member__info">
+                        <h4 class="team-member__name">Marcus Rodriguez</h4>
+                        <p class="team-member__role">Head of Reviews</p>
+                        <p class="team-member__bio">
+                            20+ years in casino operations and game development.
+                            Ensures our reviews meet the highest standards of accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-member__avatar">
+                        <span class="avatar-placeholder">JL</span>
+                    </div>
+                    <div class="team-member__info">
+                        <h4 class="team-member__name">Dr. Jennifer Liu</h4>
+                        <p class="team-member__role">Data Science Lead</p>
+                        <p class="team-member__bio">
+                            PhD in Statistics. Develops our rating algorithms and
+                            ensures our data analysis is scientifically sound.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="team-cta">
+                <button class="btn btn-outline">Meet the Full Team</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- About Component End -->
+
+    <!-- Contact Component Start -->
+    <section class="contact contact--comprehensive" id="contact">
+    <div class="container">
+
+        <!-- Section Header -->
+        <header class="contact__header">
+            <span class="contact__eyebrow">Get In Touch</span>
+            <h2 class="contact__title">Contact Our Expert Team</h2>
+            <p class="contact__subtitle">
+                We're here to help you find the perfect casino. Reach out through any of our channels
+                and get personalized recommendations from our experts.
+            </p>
+        </header>
+
+        <!-- Contact Grid -->
+        <div class="contact__grid">
+
+            <!-- Contact Form -->
+            <div class="contact__form-section">
+                <div class="form-container">
+                    <h3 class="form-container__title">Send us a Message</h3>
+                    <p class="form-container__description">
+                        Fill out the form below and our team will get back to you within 24 hours.
+                    </p>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+
+                        <!-- Personal Information -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required
+                                    aria-describedby="firstName-error">
+                                <span class="form-error" id="firstName-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required
+                                    aria-describedby="lastName-error">
+                                <span class="form-error" id="lastName-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required
+                                    aria-describedby="email-error">
+                                <span class="form-error" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    aria-describedby="phone-error">
+                                <span class="form-error" id="phone-error"></span>
+                            </div>
+                        </div>
+
+                        <!-- Inquiry Details -->
+                        <div class="form-group">
+                            <label for="inquiryType" class="form-label">Inquiry Type *</label>
+                            <select id="inquiryType" name="inquiryType" class="form-select" required
+                                aria-describedby="inquiryType-error">
+                                <option value="">Select inquiry type</option>
+                                <option value="general">General Question</option>
+                                <option value="review">Casino Review Request</option>
+                                <option value="recommendation">Personal Recommendation</option>
+                                <option value="complaint">Complaint/Issue</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="press">Press/Media</option>
+                                <option value="technical">Technical Support</option>
+                            </select>
+                            <span class="form-error" id="inquiryType-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority" class="form-label">Priority Level</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="priority" value="low" checked>
+                                    <span class="radio-custom"></span>
+                                    Low - General inquiry
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="priority" value="medium">
+                                    <span class="radio-custom"></span>
+                                    Medium - Need response soon
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="priority" value="high">
+                                    <span class="radio-custom"></span>
+                                    High - Urgent matter
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required
+                                placeholder="Brief description of your inquiry" aria-describedby="subject-error">
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required
+                                placeholder="Please provide details about your inquiry..."
+                                aria-describedby="message-error"></textarea>
+                            <span class="form-error" id="message-error"></span>
+                            <div class="form-hint">Minimum 20 characters required</div>
+                        </div>
+
+                        <!-- Preferences -->
+                        <div class="form-group">
+                            <label class="form-label">Preferred Contact Method</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="contactMethod" value="email" checked>
+                                    <span class="checkbox-custom"></span>
+                                    Email
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="contactMethod" value="phone">
+                                    <span class="checkbox-custom"></span>
+                                    Phone
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="contactMethod" value="sms">
+                                    <span class="checkbox-custom"></span>
+                                    SMS
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkbox-custom"></span>
+                                Subscribe to our newsletter for latest casino reviews and bonuses
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" value="yes" required>
+                                <span class="checkbox-custom"></span>
+                                I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#"
+                                    class="form-link">Privacy Policy</a> *
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loader" style="display: none;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                            fill="none" opacity="0.3" />
+                                        <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="2"
+                                            fill="none">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 12 12"
+                                                to="360 12 12" dur="1s" repeatCount="indefinite" />
+                                        </path>
+                                    </svg>
+                                    Sending...
+                                </span>
+                            </button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact__info-section">
+
+                <!-- Contact Methods -->
+                <div class="contact-methods">
+                    <h3 class="contact-methods__title">Other Ways to Reach Us</h3>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="contact-method__content">
+                            <h4 class="contact-method__title">Email Support</h4>
+                            <p class="contact-method__details">
+                                <a href="mailto:support@casinocompare.com">support@casinocompare.com</a>
+                            </p>
+                            <p class="contact-method__description">24/7 email support with response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="contact-method__content">
+                            <h4 class="contact-method__title">Phone Support</h4>
+                            <p class="contact-method__details">
+                                <a href="tel:+1-800-CASINO">+1 (800) CASINO-1</a>
+                            </p>
+                            <p class="contact-method__description">Mon-Fri 9AM-6PM EST, Sat-Sun 10AM-4PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="contact-method__content">
+                            <h4 class="contact-method__title">Live Chat</h4>
+                            <p class="contact-method__details">
+                                <button class="live-chat-btn">Start Live Chat</button>
+                            </p>
+                            <p class="contact-method__description">Available 24/7 for immediate assistance</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="contact-method__content">
+                            <h4 class="contact-method__title">Office Address</h4>
+                            <p class="contact-method__details">
+                                123 Casino Street<br>
+                                Gaming District, GD 12345<br>
+                                United States
+                            </p>
+                            <p class="contact-method__description">Visit us for in-person consultations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="contact-faq">
+                    <h3 class="contact-faq__title">Quick Answers</h3>
+                    <div class="faq-list">
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How do you rate casinos?</span>
+                                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We use a comprehensive 50-point rating system covering safety, games, bonuses,
+                                    customer service, and payment methods.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Are your reviews biased?</span>
+                                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No, all our reviews are independent and unbiased. We maintain strict editorial
+                                    standards and disclose any potential conflicts.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How often are reviews updated?</span>
+                                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We update our reviews monthly or whenever significant changes occur at the casinos we
+                                    monitor.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Support Hours -->
+                <div class="support-hours">
+                    <h3 class="support-hours__title">Support Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="hours-day">Monday - Friday</span>
+                            <span class="hours-time">9:00 AM - 6:00 PM EST</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="hours-day">Saturday - Sunday</span>
+                            <span class="hours-time">10:00 AM - 4:00 PM EST</span>
+                        </div>
+                        <div class="hours-item hours-item--highlight">
+                            <span class="hours-day">Live Chat</span>
+                            <span class="hours-time">24/7 Available</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="contact__social">
+            <h3 class="social__title">Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Follow us on LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                            stroke="currentColor" stroke-width="2" />
+                        <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Subscribe to our YouTube channel">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"
+                            stroke="currentColor" stroke-width="2" />
+                        <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Contact Component End -->
+
+    <!-- Footer Component Start -->
+    <footer class="casino-footer comprehensive-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Casino Games</h3>
+                <ul>
+                    <li><a href="#">Slots</a></li>
+                    <li><a href="#">Blackjack</a></li>
+                    <li><a href="#">Roulette</a></li>
+                    <li><a href="#">Poker</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Responsible Gaming</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CasinoPro. All rights reserved. Please gamble responsibly. 18+ only.</p>
+        </div>
+    </div>
+</footer>
+    <!-- Footer Component End -->
+
+    <!-- Legal Notice -->
+    <div class="legal-notice">
+        18+ Only. Please gamble responsibly. BeGambleAware.org
+    </div>
+    
+    <script src="js/main.js"></script>
 </body>
-
 </html>

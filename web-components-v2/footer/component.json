@@ -1,0 +1,15 @@
+{
+  "name": "footer",
+  "description": "Professional footer with legal compliance",
+  "category": "navigation",
+  "variants": [
+    {
+      "name": "comprehensive",
+      "description": "Full footer with all links"
+    },
+    {
+      "name": "minimal",
+      "description": "Minimal footer"
+    }
+  ]
+}

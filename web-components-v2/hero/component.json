@@ -1,0 +1,49 @@
+{
+  "name": "hero",
+  "description": "Engaging hero section",
+  "category": "content",
+  "version": "1.0.0",
+  "variants": [
+    {
+      "name": "jackpot",
+      "description": "High-energy jackpot showcase with animated counters",
+      "html": "jackpot.html",
+      "css": "jackpot.css",
+      "js": "jackpot.js"
+    },
+    {
+      "name": "welcome",
+      "description": "Welcoming hero with bonus offers and registration CTA",
+      "html": "welcome.html",
+      "css": "welcome.css",
+      "js": "welcome.js"
+    },
+    {
+      "name": "vip",
+      "description": "Exclusive VIP membership hero with luxury styling",
+      "html": "vip.html",
+      "css": "vip.css",
+      "js": "vip.js"
+    },
+    {
+      "name": "tournament",
+      "description": "Dynamic tournament hero with live leaderboards",
+      "html": "tournament.html",
+      "css": "tournament.css",
+      "js": "tournament.js"
+    },
+    {
+      "name": "live",
+      "description": "Live casino hero with real-time dealer streams",
+      "html": "live.html",
+      "css": "live.css",
+      "js": "live.js"
+    }
+  ],
+  "dependencies": [],
+  "casino_compliance": {
+    "age_verification": true,
+    "responsible_gambling": true,
+    "legal_notices": true
+  }
+}

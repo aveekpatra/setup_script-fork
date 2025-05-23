@@ -1,0 +1,328 @@
+/* Neon Header Styles */
+.casino-header.neon-header {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(26, 26, 46, 0.95) 50%,
+    rgba(10, 10, 10, 0.95) 100%
+  );
+  border-bottom: 2px solid #00ffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.neon-header .neon-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 98px,
+    rgba(0, 255, 255, 0.03) 100px
+  );
+  animation: scan 3s linear infinite;
+}
+
+.neon-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo Styles */
+.neon-header .logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.neon-header .logo-link:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.neon-header .neon-logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.neon-header .logo-text {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  letter-spacing: 0.3rem;
+  animation: neonFlicker 2s infinite alternate;
+}
+
+.neon-header .logo-sub {
+  font-size: 0.875rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  letter-spacing: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.neon-header .neon-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Navigation Styles */
+.neon-header .nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.neon-header .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.neon-header .nav-link[data-glow="cyan"]:hover,
+.neon-header .nav-link[data-glow="cyan"].active {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.neon-header .nav-link[data-glow="magenta"]:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.neon-header .nav-link[data-glow="yellow"]:hover {
+  color: #ffff00;
+  text-shadow: 0 0 10px #ffff00;
+  border-color: #ffff00;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+}
+
+.neon-header .nav-link[data-glow="green"]:hover {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  border-color: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.neon-header .nav-link[data-glow="red"]:hover {
+  color: #ff0040;
+  text-shadow: 0 0 10px #ff0040;
+  border-color: #ff0040;
+  box-shadow: 0 0 15px rgba(255, 0, 64, 0.5);
+}
+
+/* Header Actions */
+.neon-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.neon-header .neon-stats {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ffff;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.neon-header .stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.5rem;
+}
+
+.neon-header .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.neon-header .glitch {
+  animation: glitch 1s infinite;
+}
+
+.neon-header .btn-neon {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.2),
+    rgba(255, 0, 255, 0.2)
+  );
+  color: #00ffff;
+  text-decoration: none;
+  border: 2px solid #00ffff;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-header .btn-neon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.neon-header .btn-neon:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.neon-header .btn-neon:hover::before {
+  left: 100%;
+}
+
+/* Mobile Menu Toggle */
+.neon-header .mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.neon-header .mobile-menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #00ffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes neonFlicker {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  50% {
+    text-shadow: 0 0 2px #00ffff, 0 0 5px #00ffff, 0 0 8px #00ffff;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  90%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+}
+
+/* Scroll Effect */
+.neon-header.scrolled {
+  background: rgba(10, 10, 10, 0.98);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .neon-header .main-nav {
+    display: none;
+  }
+
+  .neon-header .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .neon-header .neon-stats {
+    display: none;
+  }
+
+  .neon-header .header-content {
+    height: 60px;
+  }
+
+  .neon-header .logo-text {
+    font-size: 1.5rem;
+  }
+}

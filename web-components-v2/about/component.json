@@ -1,0 +1,94 @@
+{
+  "name": "about",
+  "description": "Professional about us sections for casino comparison site",
+  "category": "content",
+  "version": "1.0.0",
+  "variants": [
+    {
+      "name": "corporate",
+      "description": "Professional corporate about section with company overview",
+      "theme": "modern",
+      "html": "corporate.html",
+      "css": "corporate.css",
+      "js": "corporate.js"
+    },
+    {
+      "name": "story",
+      "description": "Narrative-driven about section with company timeline",
+      "theme": "vintage",
+      "html": "story.html",
+      "css": "story.css",
+      "js": "story.js"
+    },
+    {
+      "name": "team",
+      "description": "Team-focused about section with member profiles",
+      "theme": "modern",
+      "html": "team.html",
+      "css": "team.css",
+      "js": "team.js"
+    },
+    {
+      "name": "mission",
+      "description": "Mission and values focused about section",
+      "theme": "luxury",
+      "html": "mission.html",
+      "css": "mission.css",
+      "js": "mission.js"
+    },
+    {
+      "name": "awards",
+      "description": "Awards and recognition showcase",
+      "theme": "luxury",
+      "html": "awards.html",
+      "css": "awards.css",
+      "js": "awards.js"
+    },
+    {
+      "name": "statistics",
+      "description": "Data-driven about section with key metrics",
+      "theme": "modern",
+      "html": "statistics.html",
+      "css": "statistics.css",
+      "js": "statistics.js"
+    },
+    {
+      "name": "testimonials",
+      "description": "Customer testimonials and reviews focused",
+      "theme": "minimal",
+      "html": "testimonials.html",
+      "css": "testimonials.css",
+      "js": "testimonials.js"
+    },
+    {
+      "name": "journey",
+      "description": "Company journey and milestone showcase",
+      "theme": "vintage",
+      "html": "journey.html",
+      "css": "journey.css",
+      "js": "journey.js"
+    },
+    {
+      "name": "expertise",
+      "description": "Industry expertise and knowledge showcase",
+      "theme": "neon",
+      "html": "expertise.html",
+      "css": "expertise.css",
+      "js": "expertise.js"
+    },
+    {
+      "name": "trust",
+      "description": "Trust, security and compliance focused",
+      "theme": "minimal",
+      "html": "trust.html",
+      "css": "trust.css",
+      "js": "trust.js"
+    }
+  ],
+  "dependencies": [],
+  "casino_compliance": {
+    "age_verification": true,
+    "responsible_gambling": true,
+    "legal_notices": true
+  }
+}

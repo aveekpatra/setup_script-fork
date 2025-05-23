@@ -1,0 +1,293 @@
+/* Luxury Header Styles */
+.casino-header.luxury-header {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(26, 26, 26, 0.95) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  border-bottom: 3px solid #ffd700;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+}
+
+.luxury-header .luxury-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffd700 25%,
+    #ffed4e 50%,
+    #ffd700 75%,
+    transparent 100%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.luxury-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  position: relative;
+}
+
+/* Logo Styles */
+.luxury-header .logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.luxury-header .logo-link:hover {
+  transform: scale(1.05);
+}
+
+.luxury-header .logo-crest {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.luxury-header .crest-icon {
+  font-size: 3rem;
+  color: #ffd700;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  animation: crownFloat 3s ease-in-out infinite;
+}
+
+.luxury-header .crest-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.luxury-header .brand-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  letter-spacing: 0.2rem;
+}
+
+.luxury-header .brand-tagline {
+  font-size: 0.75rem;
+  color: rgba(255, 215, 0, 0.8);
+  letter-spacing: 0.3rem;
+  margin-top: 0.25rem;
+}
+
+/* Navigation Styles */
+.luxury-header .nav-list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.luxury-header .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.luxury-header .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  transition: width 0.3s ease;
+}
+
+.luxury-header .nav-link:hover,
+.luxury-header .nav-link.active {
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.luxury-header .nav-link:hover::after,
+.luxury-header .nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Actions */
+.luxury-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.luxury-header .luxury-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(255, 215, 0, 0.05)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.luxury-header .membership-tier {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.luxury-header .points-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.luxury-header .points-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.luxury-header .points-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.luxury-header .btn-luxury {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-header .btn-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.luxury-header .btn-luxury:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.6);
+}
+
+.luxury-header .btn-luxury:hover::before {
+  left: 100%;
+}
+
+/* Mobile Menu Toggle */
+.luxury-header .mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.luxury-header .mobile-menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Animations */
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes crownFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+/* Scroll Effect */
+.luxury-header.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .luxury-header .main-nav {
+    display: none;
+  }
+
+  .luxury-header .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .luxury-header .luxury-info {
+    display: none;
+  }
+
+  .luxury-header .header-content {
+    height: 70px;
+  }
+
+  .luxury-header .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .luxury-header .crest-icon {
+    font-size: 2.5rem;
+  }
+}

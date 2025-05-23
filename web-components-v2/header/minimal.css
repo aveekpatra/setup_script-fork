@@ -1,0 +1,246 @@
+/* Minimal Header Styles */
+.casino-header.minimal-header {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.minimal-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: relative;
+}
+
+/* Logo Styles */
+.minimal-header .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: transform 0.2s ease;
+}
+
+.minimal-header .logo-link:hover {
+  transform: translateY(-1px);
+}
+
+.minimal-header .logo-mark {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.minimal-header .logo-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Navigation Styles */
+.minimal-header .nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.minimal-header .nav-link {
+  color: #666666;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.minimal-header .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1a1a1a;
+  transition: width 0.2s ease;
+}
+
+.minimal-header .nav-link:hover,
+.minimal-header .nav-link.active {
+  color: #1a1a1a;
+}
+
+.minimal-header .nav-link:hover::after,
+.minimal-header .nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Actions */
+.minimal-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.minimal-header .btn-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.minimal-header .btn-icon:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.minimal-header .btn-icon .icon {
+  font-size: 1.125rem;
+  opacity: 0.7;
+}
+
+.minimal-header .btn-minimal {
+  padding: 0.75rem 1.5rem;
+  background: #1a1a1a;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.minimal-header .btn-minimal:hover {
+  background: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Toggle */
+.minimal-header .mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.minimal-header .mobile-menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 1px;
+  transition: all 0.2s ease;
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+  .minimal-header {
+    background: rgba(26, 26, 26, 0.98);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .minimal-header .logo-link,
+  .minimal-header .logo-text {
+    color: #ffffff;
+  }
+
+  .minimal-header .logo-mark {
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    color: #1a1a1a;
+  }
+
+  .minimal-header .nav-link {
+    color: #cccccc;
+  }
+
+  .minimal-header .nav-link:hover,
+  .minimal-header .nav-link.active {
+    color: #ffffff;
+  }
+
+  .minimal-header .nav-link::after {
+    background: #ffffff;
+  }
+
+  .minimal-header .btn-icon {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .minimal-header .btn-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .minimal-header .btn-minimal {
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+
+  .minimal-header .btn-minimal:hover {
+    background: #e6e6e6;
+  }
+
+  .minimal-header .mobile-menu-toggle span {
+    background: #ffffff;
+  }
+}
+
+/* Scroll Effect */
+.minimal-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .minimal-header .main-nav {
+    display: none;
+  }
+
+  .minimal-header .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .minimal-header .btn-icon {
+    display: none;
+  }
+
+  .minimal-header .header-content {
+    height: 56px;
+  }
+
+  .minimal-header .logo-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+
+  .minimal-header .logo-text {
+    font-size: 1.25rem;
+  }
+}

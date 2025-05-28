@@ -1,7 +1,7 @@
-// Modern Header Component Script
+// Luxury Header Component Script
 
-function initModernHeader() {
-  const header = document.querySelector(".modern-header");
+function initLuxuryHeader() {
+  const header = document.querySelector(".luxury-header");
   if (!header) return;
 
   const mobileToggle = header.querySelector(".mobile-toggle");
@@ -22,7 +22,7 @@ function initModernHeader() {
     });
   });
 
-  // Active nav link handling
+  // Active nav link handling with premium animation
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -42,12 +42,24 @@ function initModernHeader() {
     }
   });
 
-  console.log("✅ Modern header initialized");
+  // Animate balance on load (luxury feature)
+  const balanceAmount = header.querySelector(".balance-amount");
+  if (balanceAmount) {
+    const targetAmount = balanceAmount.textContent;
+    balanceAmount.textContent = "$0.00";
+
+    setTimeout(() => {
+      balanceAmount.textContent = targetAmount;
+      balanceAmount.style.transition = "all 0.8s ease";
+    }, 500);
+  }
+
+  console.log("✅ Luxury header initialized");
 }
 
 // Initialize when DOM is ready
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initModernHeader);
+  document.addEventListener("DOMContentLoaded", initLuxuryHeader);
 } else {
-  initModernHeader();
+  initLuxuryHeader();
 }

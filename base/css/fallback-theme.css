@@ -1,0 +1,18 @@
+/* Enhanced Casino Website - Default Fallback Theme */
+
+:root {
+  --color-primary: #d4af37;
+  --color-secondary: #1a1a1a;
+  --color-accent: #ff6b35;
+  --color-background: #0f0f0f;
+  --color-surface: #1e1e1e;
+  --color-text: #ffffff;
+  --color-text-secondary: #b0b0b0;
+
+  --font-primary: Inter, system-ui, sans-serif;
+  --font-display: Poppins, sans-serif;
+
+  --spacing-base: 1rem;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}

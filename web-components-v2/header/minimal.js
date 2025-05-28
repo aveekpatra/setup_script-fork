@@ -1,7 +1,7 @@
-// Modern Header Component Script
+// Minimal Header Component Script
 
-function initModernHeader() {
-  const header = document.querySelector(".modern-header");
+function initMinimalHeader() {
+  const header = document.querySelector(".minimal-header");
   if (!header) return;
 
   const mobileToggle = header.querySelector(".mobile-toggle");
@@ -42,12 +42,12 @@ function initModernHeader() {
     }
   });
 
-  console.log("✅ Modern header initialized");
+  console.log("✅ Minimal header initialized");
 }
 
 // Initialize when DOM is ready
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initModernHeader);
+  document.addEventListener("DOMContentLoaded", initMinimalHeader);
 } else {
-  initModernHeader();
+  initMinimalHeader();
 }

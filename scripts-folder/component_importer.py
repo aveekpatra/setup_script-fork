@@ -10,6 +10,7 @@ Features:
 - Better error handling
 - Responsive design utilities
 - **NEW: Mix-and-Match Random Combinations**
+- **NEW: External Template System**
 """
 
 import os
@@ -120,13 +121,14 @@ class ColorUtils:
 
 
 class ComponentImporter:
-    """Enhanced component importer with JSON-based configuration and mix-and-match features."""
+    """Enhanced component importer with JSON-based configuration and external template system."""
     
     def __init__(self):
         self.current_dir = Path(__file__).parent.parent
         self.components_dir = self.current_dir / "web-components-v2"
         self.web_folder = self.current_dir / "web-folder"
         self.themes_dir = self.current_dir / "themes"
+        self.base_dir = self.current_dir / "base"  # NEW: Base templates directory
         self.custom_theme = None  # Will store generated theme
         
         # Component processing order
@@ -171,6 +173,43 @@ class ComponentImporter:
                 "width": "1px"
             }
         }
+
+    def load_template(self, template_path: str) -> str:
+        """Load template content from base directory."""
+        try:
+            template_file = self.base_dir / template_path
+            if template_file.exists():
+                with open(template_file, 'r', encoding='utf-8') as f:
+                    return f.read()
+            else:
+                print(f"⚠️  Template not found: {template_file}")
+                return ""
+        except Exception as e:
+            print(f"❌ Error loading template {template_path}: {e}")
+            return ""
+
+    def validate_base_templates(self) -> bool:
+        """Validate that all required base templates exist."""
+        required_templates = [
+            "templates/index.html",
+            "css/base-styles.css", 
+            "css/theme-variables.css",
+            "css/fallback-theme.css",
+            "js/main.js"
+        ]
+        
+        missing_templates = []
+        for template in required_templates:
+            if not (self.base_dir / template).exists():
+                missing_templates.append(template)
+        
+        if missing_templates:
+            print(f"❌ Missing base templates: {', '.join(missing_templates)}")
+            print(f"   Expected location: {self.base_dir}")
+            return False
+        
+        print("✅ All base templates found")
+        return True
 
     def get_theme_preferences(self) -> Tuple[str, str]:
         """Get user's theme preferences for primary color and light/dark mode."""
@@ -647,14 +686,61 @@ class ComponentImporter:
         with open(comp_dir / "component.json", 'w', encoding='utf-8') as f:
             json.dump(config, f, indent=2)
 
+    def generate_theme_css(self, theme: Dict[str, Any]) -> str:
+        """Generate CSS content with theme variables from template."""
+        # Load the theme variables template
+        template_content = self.load_template("css/theme-variables.css")
+        
+        if not template_content:
+            # Fallback if template is missing
+            return self.load_template("css/fallback-theme.css")
+        
+        # Replace placeholders with actual theme values
+        css_content = template_content.replace("{THEME_MODE}", theme["mode"].title())
+        css_content = css_content.replace("{COLOR_PRIMARY}", theme["colors"]["primary"])
+        css_content = css_content.replace("{COLOR_PRIMARY_RGB}", theme["colors"]["primary-rgb"])
+        css_content = css_content.replace("{COLOR_SECONDARY}", theme["colors"]["secondary"])
+        css_content = css_content.replace("{COLOR_ACCENT}", theme["colors"]["accent"])
+        css_content = css_content.replace("{COLOR_BACKGROUND}", theme["colors"]["background"])
+        css_content = css_content.replace("{COLOR_SURFACE}", theme["colors"]["surface"])
+        css_content = css_content.replace("{COLOR_SURFACE_ELEVATED}", theme["colors"]["surface-elevated"])
+        css_content = css_content.replace("{COLOR_TEXT}", theme["colors"]["text"])
+        css_content = css_content.replace("{COLOR_TEXT_SECONDARY}", theme["colors"]["text-secondary"])
+        css_content = css_content.replace("{COLOR_BORDER}", theme["colors"]["border"])
+        css_content = css_content.replace("{COLOR_HOVER}", theme["colors"]["hover"])
+        css_content = css_content.replace("{COLOR_ACTIVE}", theme["colors"]["active"])
+        css_content = css_content.replace("{COLOR_FOCUS}", theme["colors"]["focus"])
+        css_content = css_content.replace("{COLOR_SUCCESS}", theme["colors"]["success"])
+        css_content = css_content.replace("{COLOR_WARNING}", theme["colors"]["warning"])
+        css_content = css_content.replace("{COLOR_ERROR}", theme["colors"]["error"])
+        css_content = css_content.replace("{COLOR_GOLD}", theme["colors"]["gold"])
+        css_content = css_content.replace("{COLOR_SILVER}", theme["colors"]["silver"])
+        css_content = css_content.replace("{COLOR_BRONZE}", theme["colors"]["bronze"])
+        css_content = css_content.replace("{FONT_PRIMARY}", theme["typography"]["font-primary"])
+        css_content = css_content.replace("{FONT_DISPLAY}", theme["typography"]["font-display"])
+        css_content = css_content.replace("{SPACING_BASE}", theme["spacing"]["base"])
+        css_content = css_content.replace("{BORDER_RADIUS}", theme["borders"]["radius"])
+        css_content = css_content.replace("{BORDER_WIDTH}", theme["borders"]["width"])
+        css_content = css_content.replace("{SHADOW_SMALL}", theme["shadows"]["small"])
+        css_content = css_content.replace("{SHADOW_MEDIUM}", theme["shadows"]["medium"])
+        css_content = css_content.replace("{SHADOW_LARGE}", theme["shadows"]["large"])
+        
+        return css_content
+
 
 def import_components():
     """
-    Enhanced component import system with mix-and-match functionality.
+    Enhanced component import system with mix-and-match functionality and external templates.
     """
     print("=== Enhanced Component Import System with Mix-and-Match ===")
     
     importer = ComponentImporter()
+    
+    # Validate base templates first
+    print("\n🔍 Validating base template system...")
+    if not importer.validate_base_templates():
+        print("❌ Base template validation failed. Please ensure all templates exist in the base/ directory.")
+        return
     
     # Check if enhanced structure exists
     if not importer.components_dir.exists():
@@ -861,28 +947,7 @@ def _import_selected_component(importer: ComponentImporter, comp_name: str, vari
 def _generate_base_website(importer: ComponentImporter):
     """Generate base website structure with custom theme."""
     # Create base HTML
-    html_content = '''<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Casino Website</title>
-    <meta name="description" content="Experience the best online casino games">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Components will be inserted here -->
-    
-    <!-- Legal Notice -->
-    <div class="legal-notice">
-        18+ Only. Please gamble responsibly. BeGambleAware.org
-    </div>
-    
-    <script src="js/main.js"></script>
-</body>
-</html>'''
+    html_content = importer.load_template("templates/index.html")
     
     with open(importer.web_folder / "index.html", 'w', encoding='utf-8') as f:
         f.write(html_content)
@@ -890,296 +955,19 @@ def _generate_base_website(importer: ComponentImporter):
     # Generate CSS with custom theme or fallback to default
     if importer.custom_theme:
         theme = importer.custom_theme
-        css_content = f'''/* Enhanced Casino Website - Custom {theme["mode"].title()} Theme */
-
-:root {{
-    /* Primary Colors */
-    --color-primary: {theme["colors"]["primary"]};
-    --color-primary-rgb: {theme["colors"]["primary-rgb"]};
-    --color-secondary: {theme["colors"]["secondary"]};
-    --color-accent: {theme["colors"]["accent"]};
-    
-    /* Background Colors */
-    --color-background: {theme["colors"]["background"]};
-    --color-surface: {theme["colors"]["surface"]};
-    --color-surface-elevated: {theme["colors"]["surface-elevated"]};
-    
-    /* Text Colors */
-    --color-text: {theme["colors"]["text"]};
-    --color-text-secondary: {theme["colors"]["text-secondary"]};
-    
-    /* Border & Interactive */
-    --color-border: {theme["colors"]["border"]};
-    --color-hover: {theme["colors"]["hover"]};
-    --color-active: {theme["colors"]["active"]};
-    --color-focus: {theme["colors"]["focus"]};
-    
-    /* Status Colors */
-    --color-success: {theme["colors"]["success"]};
-    --color-warning: {theme["colors"]["warning"]};
-    --color-error: {theme["colors"]["error"]};
-    
-    /* Casino Colors */
-    --color-gold: {theme["colors"]["gold"]};
-    --color-silver: {theme["colors"]["silver"]};
-    --color-bronze: {theme["colors"]["bronze"]};
-    
-    /* Typography */
-    --font-primary: {theme["typography"]["font-primary"]};
-    --font-display: {theme["typography"]["font-display"]};
-    
-    /* Spacing & Layout */
-    --spacing-base: {theme["spacing"]["base"]};
-    --border-radius: {theme["borders"]["radius"]};
-    --border-width: {theme["borders"]["width"]};
-    
-    /* Shadows */
-    --shadow-small: {theme["shadows"]["small"]};
-    --shadow-medium: {theme["shadows"]["medium"]};
-    --shadow-large: {theme["shadows"]["large"]};
-    
-    /* Transitions */
-    --transition: all 0.3s ease;
-    --transition-fast: all 0.15s ease;
-    --transition-slow: all 0.5s ease;
-}}'''
+        css_content = importer.generate_theme_css(theme)
     else:
         # Fallback to default theme
-        css_content = '''/* Enhanced Casino Website - Base Styles */
-
-:root {
-    --color-primary: #d4af37;
-    --color-secondary: #1a1a1a;
-    --color-accent: #ff6b35;
-    --color-background: #0f0f0f;
-    --color-surface: #1e1e1e;
-    --color-text: #ffffff;
-    --color-text-secondary: #b0b0b0;
-    
-    --font-primary: Inter, system-ui, sans-serif;
-    --font-display: Poppins, sans-serif;
-    
-    --spacing-base: 1rem;
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
-}'''
+        css_content = importer.load_template("css/fallback-theme.css")
     
     # Add common base styles
-    css_content += '''
-
-/* Reset and Base */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--font-primary);
-    background-color: var(--color-background);
-    color: var(--color-text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Utilities */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-base);
-}
-
-/* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: var(--border-radius);
-    font-family: var(--font-primary);
-    font-weight: 500;
-    text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    color: var(--color-background);
-    box-shadow: var(--shadow-small);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
-    background: linear-gradient(135deg, var(--color-hover), var(--color-accent));
-}
-
-.btn-primary:active {
-    transform: translateY(0);
-    background: linear-gradient(135deg, var(--color-active), var(--color-accent));
-}
-
-.btn-secondary {
-    background: var(--color-surface);
-    color: var(--color-text);
-    border: var(--border-width) solid var(--color-border);
-}
-
-.btn-secondary:hover {
-    background: var(--color-surface-elevated);
-    border-color: var(--color-primary);
-}
-
-/* Cards */
-.card {
-    background: var(--color-surface);
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow-small);
-    border: var(--border-width) solid var(--color-border);
-    transition: var(--transition);
-}
-
-.card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-2px);
-}
-
-/* Text Styles */
-.text-primary { color: var(--color-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-success { color: var(--color-success); }
-.text-warning { color: var(--color-warning); }
-.text-error { color: var(--color-error); }
-
-/* Backgrounds */
-.bg-primary { background-color: var(--color-primary); }
-.bg-secondary { background-color: var(--color-secondary); }
-.bg-surface { background-color: var(--color-surface); }
-.bg-surface-elevated { background-color: var(--color-surface-elevated); }
-
-/* Legal Notice */
-.legal-notice {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--color-surface);
-    color: var(--color-text);
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    z-index: 1000;
-    border-top: var(--border-width) solid var(--color-border);
-    backdrop-filter: blur(10px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-    }
-    
-    html {
-        font-size: 14px;
-    }
-    
-    .btn {
-        padding: 0.5rem 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 13px;
-    }
-    
-    .card {
-        padding: 1rem;
-    }
-}
-
-/* Component styles will be appended below */
-'''
+    css_content += importer.load_template("css/base-styles.css")
     
     with open(importer.web_folder / "css" / "styles.css", 'w', encoding='utf-8') as f:
         f.write(css_content)
     
     # Create base JavaScript
-    js_content = '''// Enhanced Casino Website - Base JavaScript
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎰 Enhanced casino website loaded');
-    
-    // Initialize all components
-    initializeAllComponents();
-    
-    // Setup global handlers
-    setupGlobalHandlers();
-    
-    // Setup theme system
-    setupThemeSystem();
-});
-
-function initializeAllComponents() {
-    console.log('🔧 Initializing enhanced components...');
-    // Component initialization functions will be called here
-}
-
-function setupGlobalHandlers() {
-    // Global keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            // Close any open menus
-            document.querySelectorAll('.mobile-nav.active').forEach(nav => {
-                nav.classList.remove('active');
-            });
-        }
-    });
-    
-    // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-}
-
-function setupThemeSystem() {
-    // Add dynamic theme switching capabilities
-    const root = document.documentElement;
-    
-    // Theme animation support
-    function animateThemeChange() {
-        root.style.setProperty('--transition', 'all 0.3s ease');
-        setTimeout(() => {
-            root.style.removeProperty('--transition');
-        }, 300);
-    }
-    
-    // Expose theme utilities globally
-    window.casinoTheme = {
-        animate: animateThemeChange
-    };
-}
-
-// Component scripts will be appended below
-'''
+    js_content = importer.load_template("js/main.js")
     
     with open(importer.web_folder / "js" / "main.js", 'w', encoding='utf-8') as f:
         f.write(js_content)

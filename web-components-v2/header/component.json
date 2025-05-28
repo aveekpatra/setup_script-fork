@@ -1,49 +1,112 @@
 {
   "name": "header",
-  "description": "Professional casino header with navigation",
-  "category": "navigation",
-  "version": "1.0.0",
+  "type": "navigation",
+  "description": "Clean, minimal, elegant header components with themeable design using external template system",
+  "category": "layout",
   "variants": [
     {
       "name": "modern",
-      "description": "Modern gradient header with smooth animations",
-      "html": "modern.html",
-      "css": "modern.css",
-      "js": "modern.js"
-    },
-    {
-      "name": "luxury",
-      "description": "Luxury gold header with premium styling",
-      "html": "luxury.html",
-      "css": "luxury.css",
-      "js": "luxury.js"
-    },
-    {
-      "name": "neon",
-      "description": "Vibrant neon gaming header with glow effects",
-      "html": "neon.html",
-      "css": "neon.css",
-      "js": "neon.js"
+      "description": "Clean modern header with smooth interactions and premium feel",
+      "files": {
+        "html": "modern.html",
+        "css": "modern.css",
+        "js": "modern.js"
+      },
+      "features": [
+        "Sticky navigation",
+        "Mobile responsive",
+        "Clean typography",
+        "Smooth transitions",
+        "Theme integration"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     },
     {
       "name": "minimal",
-      "description": "Clean minimalist header with subtle elegance",
-      "html": "minimal.html",
-      "css": "minimal.css",
-      "js": "minimal.js"
+      "description": "Ultra-minimal header focusing on essential elements only",
+      "files": {
+        "html": "minimal.html",
+        "css": "minimal.css",
+        "js": "minimal.js"
+      },
+      "features": [
+        "Minimal design",
+        "Fast loading",
+        "Clean interactions",
+        "Mobile friendly",
+        "Typography focused"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     },
     {
-      "name": "vintage",
-      "description": "Classic vintage casino header with retro charm",
-      "html": "vintage.html",
-      "css": "vintage.css",
-      "js": "vintage.js"
+      "name": "luxury",
+      "description": "Premium header with elegant styling and gold accents",
+      "files": {
+        "html": "luxury.html",
+        "css": "luxury.css",
+        "js": "luxury.js"
+      },
+      "features": [
+        "Premium styling",
+        "Gold theming",
+        "Balance display",
+        "Elegant animations",
+        "VIP experience"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
+    },
+    {
+      "name": "neon",
+      "description": "Cyberpunk-themed header with neon effects and energy bar",
+      "files": {
+        "html": "neon.html",
+        "css": "neon.css",
+        "js": "neon.js"
+      },
+      "features": [
+        "Neon glow effects",
+        "Cyberpunk theme",
+        "Energy bar animation",
+        "Gaming aesthetics",
+        "Dynamic interactions"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     }
   ],
-  "dependencies": [],
-  "casino_compliance": {
-    "age_verification": true,
-    "responsible_gambling": true,
-    "legal_notices": true
-  }
+  "dependencies": {
+    "external_templates": {
+      "base_css": "base/css/base-styles.css",
+      "theme_variables": "base/css/theme-variables.css",
+      "base_js": "base/js/main.js"
+    }
+  },
+  "theme_integration": {
+    "uses_css_variables": true,
+    "responsive": true,
+    "accessibility": "WCAG 2.1 AA",
+    "theme_variables": [
+      "color-primary",
+      "color-secondary",
+      "color-accent",
+      "color-text",
+      "color-text-secondary",
+      "color-background",
+      "color-surface",
+      "color-border",
+      "color-gold",
+      "font-display",
+      "font-body",
+      "border-radius",
+      "transition",
+      "shadow-medium"
+    ]
+  },
+  "styling": {
+    "methodology": "BEM-inspired",
+    "css_custom_properties": true,
+    "mobile_first": true,
+    "progressive_enhancement": true
+  },
+  "version": "2.0.0",
+  "last_updated": "2024"
 }

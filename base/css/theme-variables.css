@@ -1,0 +1,53 @@
+/* Enhanced Casino Website - {THEME_MODE} Theme */
+
+:root {
+    /* Primary Colors */
+    --color-primary: {COLOR_PRIMARY};
+    --color-primary-rgb: {COLOR_PRIMARY_RGB};
+    --color-secondary: {COLOR_SECONDARY};
+    --color-accent: {COLOR_ACCENT};
+    
+    /* Background Colors */
+    --color-background: {COLOR_BACKGROUND};
+    --color-surface: {COLOR_SURFACE};
+    --color-surface-elevated: {COLOR_SURFACE_ELEVATED};
+    
+    /* Text Colors */
+    --color-text: {COLOR_TEXT};
+    --color-text-secondary: {COLOR_TEXT_SECONDARY};
+    
+    /* Border & Interactive */
+    --color-border: {COLOR_BORDER};
+    --color-hover: {COLOR_HOVER};
+    --color-active: {COLOR_ACTIVE};
+    --color-focus: {COLOR_FOCUS};
+    
+    /* Status Colors */
+    --color-success: {COLOR_SUCCESS};
+    --color-warning: {COLOR_WARNING};
+    --color-error: {COLOR_ERROR};
+    
+    /* Casino Colors */
+    --color-gold: {COLOR_GOLD};
+    --color-silver: {COLOR_SILVER};
+    --color-bronze: {COLOR_BRONZE};
+    
+    /* Typography */
+    --font-primary: {FONT_PRIMARY};
+    --font-display: {FONT_DISPLAY};
+    
+    /* Spacing & Layout */
+    --spacing-base: {SPACING_BASE};
+    --border-radius: {BORDER_RADIUS};
+    --border-width: {BORDER_WIDTH};
+    
+    /* Shadows */
+    --shadow-small: {SHADOW_SMALL};
+    --shadow-medium: {SHADOW_MEDIUM};
+    --shadow-large: {SHADOW_LARGE};
+    
+    /* Transitions */
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
+    --transition-slow: all 0.5s ease;
+} 

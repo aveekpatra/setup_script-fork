@@ -1,49 +1,120 @@
 {
   "name": "hero",
-  "description": "Engaging hero section",
-  "category": "content",
-  "version": "1.0.0",
+  "type": "content",
+  "description": "Clean, minimal, elegant hero sections with themeable design using external template system",
+  "category": "layout",
   "variants": [
     {
-      "name": "jackpot",
-      "description": "High-energy jackpot showcase with animated counters",
-      "html": "jackpot.html",
-      "css": "jackpot.css",
-      "js": "jackpot.js"
-    },
-    {
       "name": "welcome",
-      "description": "Welcoming hero with bonus offers and registration CTA",
-      "html": "welcome.html",
-      "css": "welcome.css",
-      "js": "welcome.js"
+      "description": "Clean welcome hero with bonus display and feature highlights",
+      "files": {
+        "html": "welcome.html",
+        "css": "welcome.css",
+        "js": "welcome.js"
+      },
+      "features": [
+        "Animated bonus display",
+        "Feature grid",
+        "Responsive design",
+        "Smooth animations",
+        "Theme integration"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     },
     {
-      "name": "vip",
-      "description": "Exclusive VIP membership hero with luxury styling",
-      "html": "vip.html",
-      "css": "vip.css",
-      "js": "vip.js"
+      "name": "jackpot",
+      "description": "Dynamic jackpot hero with animated counter and winners ticker",
+      "files": {
+        "html": "jackpot.html",
+        "css": "jackpot.css",
+        "js": "jackpot.js"
+      },
+      "features": [
+        "Live jackpot counter",
+        "Winners showcase",
+        "Animated effects",
+        "Progressive display",
+        "Real-time updates"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     },
     {
-      "name": "tournament",
-      "description": "Dynamic tournament hero with live leaderboards",
-      "html": "tournament.html",
-      "css": "tournament.css",
-      "js": "tournament.js"
+      "name": "luxury",
+      "description": "Premium VIP hero with gold theming and exclusive benefits display",
+      "files": {
+        "html": "luxury.html",
+        "css": "luxury.css",
+        "js": "luxury.js"
+      },
+      "features": [
+        "VIP tier display",
+        "Premium animations",
+        "Gold theming",
+        "Stats counter",
+        "Luxury styling"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     },
     {
-      "name": "live",
-      "description": "Live casino hero with real-time dealer streams",
-      "html": "live.html",
-      "css": "live.css",
-      "js": "live.js"
+      "name": "minimal",
+      "description": "Ultra-minimal hero focusing on typography and single call-to-action",
+      "files": {
+        "html": "minimal.html",
+        "css": "minimal.css",
+        "js": "minimal.js"
+      },
+      "features": [
+        "Clean typography",
+        "Single CTA",
+        "Minimal design",
+        "Fast loading",
+        "Essential elements only"
+      ],
+      "compatibility": ["desktop", "tablet", "mobile"]
     }
   ],
-  "dependencies": [],
+  "dependencies": {
+    "external_templates": {
+      "base_css": "base/css/base-styles.css",
+      "theme_variables": "base/css/theme-variables.css",
+      "base_js": "base/js/main.js"
+    }
+  },
+  "theme_integration": {
+    "uses_css_variables": true,
+    "responsive": true,
+    "accessibility": "WCAG 2.1 AA",
+    "theme_variables": [
+      "color-primary",
+      "color-secondary",
+      "color-accent",
+      "color-text",
+      "color-text-secondary",
+      "color-background",
+      "color-surface",
+      "color-surface-elevated",
+      "color-border",
+      "color-gold",
+      "font-display",
+      "font-primary",
+      "border-radius",
+      "transition",
+      "shadow-medium",
+      "shadow-large"
+    ]
+  },
+  "styling": {
+    "methodology": "BEM-inspired",
+    "css_custom_properties": true,
+    "mobile_first": true,
+    "progressive_enhancement": true,
+    "animations": "CSS keyframes with JS triggers"
+  },
   "casino_compliance": {
     "age_verification": true,
     "responsible_gambling": true,
     "legal_notices": true
-  }
+  },
+  "version": "2.0.0",
+  "last_updated": "2024"
 }

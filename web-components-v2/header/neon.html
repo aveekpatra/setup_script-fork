@@ -1,39 +1,54 @@
 <header class="casino-header neon-header">
-    <div class="neon-background"></div>
     <div class="container">
         <div class="header-content">
+            <!-- Logo Section -->
             <div class="logo">
                 <a href="#" class="logo-link">
-                    <div class="neon-logo">
-                        <span class="logo-text">NEON</span>
-                        <span class="logo-sub">CASINO</span>
-                        <div class="neon-glow"></div>
-                    </div>
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">NeonCasino</span>
+                    <span class="logo-glow"></span>
                 </a>
             </div>
+
+            <!-- Navigation -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-link active" data-glow="cyan">Slots</a></li>
-                    <li><a href="#" class="nav-link" data-glow="magenta">Table Games</a></li>
-                    <li><a href="#" class="nav-link" data-glow="yellow">Live Action</a></li>
-                    <li><a href="#" class="nav-link" data-glow="green">Tournaments</a></li>
-                    <li><a href="#" class="nav-link" data-glow="red">Jackpots</a></li>
+                    <li><a href="#casino" class="nav-link active">Casino</a></li>
+                    <li><a href="#sports" class="nav-link">Esports</a></li>
+                    <li><a href="#live" class="nav-link">Live</a></li>
+                    <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
+                    <li><a href="#arcade" class="nav-link">Arcade</a></li>
                 </ul>
             </nav>
+
+            <!-- Header Actions -->
             <div class="header-actions">
-                <div class="neon-stats">
-                    <div class="stat-item">
-                        <span class="stat-label">Online:</span>
-                        <span class="stat-value glitch">1,247</span>
-                    </div>
+                <div class="energy-bar">
+                    <span class="energy-label">Energy</span>
+                    <div class="energy-fill"></div>
+                    <span class="energy-value">87%</span>
                 </div>
-                <a href="#" class="btn btn-neon">Enter Game</a>
+                <button class="btn btn-secondary">Connect</button>
+                <button class="btn btn-primary">Play Now</button>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="#casino" class="mobile-nav-link">Casino</a></li>
+                <li><a href="#sports" class="mobile-nav-link">Esports</a></li>
+                <li><a href="#live" class="mobile-nav-link">Live</a></li>
+                <li><a href="#tournaments" class="mobile-nav-link">Tournaments</a></li>
+                <li><a href="#arcade" class="mobile-nav-link">Arcade</a></li>
+            </ul>
+        </nav>
     </div>
 </header>

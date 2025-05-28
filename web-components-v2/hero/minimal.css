@@ -1,0 +1,126 @@
+/* Minimal Hero Component */
+.minimal-hero {
+  background: var(--color-background);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.minimal-hero .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.minimal-hero .hero-text {
+  max-width: 600px;
+}
+
+/* Hero Typography */
+.minimal-hero .hero-title {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.minimal-hero .hero-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.minimal-hero .hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Single Action Button */
+.minimal-hero .hero-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.minimal-hero .btn {
+  padding: 1.25rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+  color: var(--color-background);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.minimal-hero .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.minimal-hero .btn:hover::before {
+  left: 100%;
+}
+
+.minimal-hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+}
+
+.minimal-hero .btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .minimal-hero {
+    padding: 4rem 0;
+  }
+
+  .minimal-hero .hero-title {
+    font-size: 3rem;
+  }
+
+  .minimal-hero .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .minimal-hero {
+    padding: 3rem 0;
+  }
+
+  .minimal-hero .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .minimal-hero .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .minimal-hero .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

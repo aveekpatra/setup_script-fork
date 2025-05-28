@@ -1,96 +1,343 @@
-/* Jackpot Hero Styles */
-.casino-hero {
-    background: linear-gradient(135deg, var(--color-background), var(--color-surface));
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
+/* Jackpot Hero Component */
+.jackpot-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-surface) 100%
+  );
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    min-height: 60vh;
+.jackpot-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(var(--color-primary-rgb), 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
 }
 
-.hero-title {
-    font-family: var(--font-display);
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+.jackpot-hero .hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.highlight {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* Hero Text */
+.jackpot-hero .hero-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.jackpot-hero .hero-pre {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
-.hero-actions {
-    display: flex;
-    gap: 1rem;
+.jackpot-hero .hero-highlight {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-glow 2s ease-in-out infinite alternate;
 }
 
-.btn-large {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+.jackpot-hero .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 480px;
 }
 
-.btn-secondary {
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+.jackpot-hero .hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.btn-secondary:hover {
-    background: var(--color-primary);
-    color: var(--color-background);
+.jackpot-hero .btn-hero {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
 
-.feature-display {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: calc(var(--border-radius) * 2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.jackpot-hero .btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-medium);
 }
 
-.feature-label {
-    display: block;
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
+.jackpot-hero .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
 }
 
-.feature-value {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-primary);
+/* Jackpot Display */
+.jackpot-hero .hero-jackpot {
+  display: flex;
+  justify-content: center;
 }
 
+.jackpot-hero .jackpot-card {
+  background: var(--color-surface);
+  border: 3px solid var(--color-primary);
+  border-radius: calc(var(--border-radius) * 3);
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-large);
+  position: relative;
+  overflow: hidden;
+  min-width: 280px;
+}
+
+.jackpot-hero .jackpot-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-accent),
+    var(--color-primary)
+  );
+  z-index: -1;
+  border-radius: calc(var(--border-radius) * 3);
+  animation: rotate 3s linear infinite;
+}
+
+.jackpot-hero .jackpot-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.jackpot-hero .jackpot-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.jackpot-hero .jackpot-currency {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-right: 0.25rem;
+}
+
+.jackpot-hero .jackpot-value {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.4);
+  letter-spacing: 0.02em;
+}
+
+.jackpot-hero .jackpot-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.jackpot-hero .counter-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.jackpot-hero .counter-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Winners Section */
+.jackpot-hero .hero-winners {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.jackpot-hero .winners-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.jackpot-hero .winners-icon {
+  font-size: 1.5rem;
+  filter: sepia(1) hue-rotate(40deg) saturate(2);
+}
+
+.jackpot-hero .winners-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.jackpot-hero .winners-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.jackpot-hero .winner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.jackpot-hero .winner-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.jackpot-hero .winner-name {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.jackpot-hero .winner-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.4);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.8);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-actions {
-        justify-content: center;
-    }
+  .jackpot-hero {
+    padding: 3rem 0;
+  }
+
+  .jackpot-hero .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .jackpot-hero .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .jackpot-hero .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .jackpot-hero .hero-actions {
+    justify-content: center;
+  }
+
+  .jackpot-hero .jackpot-value {
+    font-size: 2.5rem;
+  }
+
+  .jackpot-hero .winners-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jackpot-hero .hero-title {
+    font-size: 2rem;
+  }
+
+  .jackpot-hero .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .jackpot-hero .btn-hero {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .jackpot-hero .jackpot-card {
+    padding: 1.5rem;
+    min-width: auto;
+  }
+
+  .jackpot-hero .jackpot-value {
+    font-size: 2rem;
+  }
+
+  .jackpot-hero .winners-list {
+    grid-template-columns: 1fr;
+  }
 }

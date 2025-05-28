@@ -1,25 +1,19 @@
-# API Reference - Casino Website Generator
+# API Reference - Casino Website Generator Production System
 
-## Modular Architecture Overview
+## System Overview
 
-The system has been completely refactored from a monolithic `starter.py` into 7 specialized modules:
+The Casino Website Generator Production System is powered by a **sophisticated modular architecture** orchestrated by `main_controller.py` (297 lines). The system provides comprehensive workflow automation, country-specific localization, advanced component processing, and professional validation through specialized modules.
 
-- **`main_controller.py`** - Main orchestrator and interactive menu
-- **`component_importer.py`** - Enhanced component system (primary)
-- **`country_config.py`** - Country selection and localization
-- **`image_downloader.py`** - Image management and processing
-- **`error_checker.py`** - Quality assurance and validation
-- **`cleanup_manager.py`** - Optimization and cleanup
-- **`img_processor.py`** - Image processing utilities
+## Primary Module: `main_controller.py`
 
-## Core Functions in `main_controller.py`
+### Main Entry Functions
 
-### `main()`
+#### `main()`
 
-**Purpose**: Original main entry point (maintained for compatibility)
+**Purpose**: Primary function called by starter.py for basic menu functionality
 **Parameters**: None
 **Returns**: None
-**Description**: Displays basic menu with 5 options and routes to appropriate module function.
+**Description**: Displays basic menu with 5 core operations and handles user selection
 
 **Menu Options**:
 
@@ -29,364 +23,492 @@ The system has been completely refactored from a monolithic `starter.py` into 7 
 4. Error Checking → `error_checker.error_checking()`
 5. Clean Up → `cleanup_manager.cleanup()`
 
----
+#### `interactive_menu()`
 
-### `interactive_menu()`
-
-**Purpose**: Enhanced interactive menu system with extended options
+**Purpose**: Extended interactive menu with comprehensive workflow options
 **Parameters**: None
 **Returns**: None
-**Description**: Main interface providing comprehensive project management options.
+**Description**: Full-featured menu system with advanced workflows and project management
 
-**Menu Options**:
+**Extended Menu Structure**:
 
-- **Basic Operations** (1-5): Individual module execution
-- **Advanced Options** (6-9): Workflow automation and project management
-  - Full Workflow - Complete automation
-  - Quick Build - Country + Components only
-  - Project Status - Current state analysis
-  - Module Information - Documentation display
+```
+CASINO WEBSITE GENERATOR - MAIN MENU
+Basic Operations:
+  1. Configure Country        → Country localization
+  2. Import Components        → Advanced component system
+  3. Download Images         → Image management
+  4. Error Checking          → Comprehensive validation
+  5. Clean Up                → Optimization and cleanup
 
----
-
-### `run_full_workflow()`
-
-**Purpose**: Complete automated website generation workflow
-**Parameters**: None
-**Returns**: None
-**Description**: Executes all generation steps in sequence with error handling.
-
-**Execution Steps**:
-
-1. Country configuration (`configure_template()`)
-2. Component import (`import_components()`)
-3. Image processing (`download_images()`)
-4. Error checking (`error_checking()`)
-5. Final cleanup (`cleanup()`)
-
----
-
-### `quick_build()`
-
-**Purpose**: Rapid prototyping with essential components only
-**Parameters**: None
-**Returns**: None
-**Description**: Generates basic casino website with country + components only.
-
----
-
-### `show_project_status()`
-
-**Purpose**: Project state analysis and recommendations
-**Parameters**: None
-**Returns**: None
-**Description**: Analyzes generated files and provides next step recommendations.
-
-## Enhanced Component System (`component_importer.py`)
-
-### `ComponentImporter` Class
-
-**Purpose**: Enhanced component importer with JSON-based configuration
-**Description**: Modern component system featuring real files, JSON configuration, and professional theming.
-
-**Key Features**:
-
-- JSON-based component configuration
-- Real component file loading (HTML/CSS/JS)
-- Advanced theming system
-- Professional variant selection
-- Casino compliance integration
-
----
-
-### `import_components()`
-
-**Purpose**: Main component assembly function for enhanced system
-**Parameters**: None
-**Returns**: None
-**Description**: Loads components from JSON configuration and assembles complete website.
-
-**Process Flow**:
-
-1. Validates enhanced component structure exists
-2. Gets available components from `web-components-v2/`
-3. Loads component configurations from `component.json` files
-4. Presents user with component selection interface
-5. Randomly selects variants for chosen components
-6. Loads actual HTML/CSS/JS files from disk
-7. Assembles components into final website structure
-
-**Generated Files**:
-
-- `web-folder/index.html` - Complete HTML document with components
-- `web-folder/css/styles.css` - Combined CSS with base styles + components
-- `web-folder/js/main.js` - Combined JavaScript with functionality
-
----
-
-### `ComponentImporter.load_component_config(component_name)`
-
-**Purpose**: Load component configuration from JSON file
-**Parameters**:
-
-- `component_name` (string): Name of component directory
-  **Returns**: Dict containing component configuration
-  **Description**: Loads and parses `component.json` from component directory.
-
-**Configuration Structure**:
-
-```json
-{
-  "name": "header",
-  "description": "Professional casino header with navigation",
-  "category": "navigation",
-  "version": "1.0.0",
-  "variants": [
-    {
-      "name": "modern",
-      "description": "Modern gradient header with smooth animations",
-      "html": "modern.html",
-      "css": "modern.css",
-      "js": "modern.js"
-    }
-  ],
-  "dependencies": [],
-  "casino_compliance": {
-    "age_verification": true,
-    "responsible_gambling": true,
-    "legal_notices": true
-  }
-}
+Advanced Options:
+  6. Full Workflow           → Complete automated generation
+  7. Quick Build             → Essential steps only
+  8. Show Project Status     → Real-time monitoring
+  9. Module Information      → Built-in help system
+  0. Exit
 ```
 
----
+#### `run_full_workflow()`
 
-### `ComponentImporter.get_available_components()`
-
-**Purpose**: Discover available components with JSON configurations
-**Parameters**: None
-**Returns**: List of component names that have valid `component.json` files
-**Description**: Scans `web-components-v2/` directory for components with valid configurations.
-
----
-
-### `ComponentImporter.create_enhanced_structure()`
-
-**Purpose**: Create enhanced component structure from scratch
+**Purpose**: Execute complete end-to-end website generation workflow
 **Parameters**: None
 **Returns**: None
-**Description**: Creates the complete enhanced component system with directories, JSON configurations, and theme files.
+**Description**: Automated workflow running all modules in sequence with error handling
 
-**Created Structure**:
+**Workflow Sequence**:
 
-- `web-components-v2/` directory with component subdirectories
-- `component.json` files for each component
-- `themes/` directory with JSON theme definitions
-- Sample component configurations for header, hero, footer
+1. **Country Configuration**: Select and configure country-specific content
+2. **Component Import**: Import and assemble components with Mix-and-Match
+3. **Image Processing**: Download and process images
+4. **Error Validation**: Comprehensive website validation
+5. **Cleanup & Optimization**: Final optimization and production build
 
----
+#### `quick_build()`
 
-### `_generate_base_website(importer)`
-
-**Purpose**: Generate base website structure with enhanced CSS/JS framework
-**Parameters**:
-
-- `importer` (ComponentImporter): ComponentImporter instance
-  **Returns**: None
-  **Description**: Creates foundation HTML/CSS/JS files with modern styling framework.
-
-**Generated Base Features**:
-
-- Modern CSS framework with custom properties
-- Responsive design utilities
-- Professional button styles
-- Legal notice integration
-- Component initialization system
-
----
-
-### `_import_single_component(importer, comp_name)`
-
-**Purpose**: Import single component with variant selection
-**Parameters**:
-
-- `importer` (ComponentImporter): ComponentImporter instance
-- `comp_name` (string): Component name to import
-  **Returns**: Boolean success status
-  **Description**: Loads component configuration, selects random variant, and integrates files.
-
-**Process Steps**:
-
-1. Load component configuration from JSON
-2. Randomly select variant from available options
-3. Read HTML file and insert into website
-4. Read CSS file and append to stylesheet
-5. Read JS file and append to main script
-
----
-
-### `_insert_component_html(importer, html_content, comp_type)`
-
-**Purpose**: Insert component HTML into appropriate document location
-**Parameters**:
-
-- `importer` (ComponentImporter): ComponentImporter instance
-- `html_content` (string): Component HTML content
-- `comp_type` (string): Component type (header, hero, footer, etc.)
-  **Returns**: None
-  **Description**: Intelligently inserts components in logical order within HTML structure.
-
-**Insertion Rules**:
-
-- **header**: After `<body>` tag
-- **footer**: Before legal notice section
-- **others**: Before legal notice section in processing order
-
-## Country Configuration (`country_config.py`)
-
-### `configure_template()`
-
-**Purpose**: Country selection and content copying with enhanced interface
+**Purpose**: Quick development build with essential components only
 **Parameters**: None
 **Returns**: None
-**Description**: Interactive country selection with improved user experience.
+**Description**: Streamlined build process for rapid development iteration
 
-**Available Countries**:
+**Quick Process**:
 
-- Denmark, France, Portugal, UK-IR, Croatia, Argentina
+- Country configuration
+- Component import
+- Skip image processing, validation, and optimization
+- Generate basic functional website
+
+#### `show_project_status()`
+
+**Purpose**: Display current project status and generated file information
+**Parameters**: None
+**Returns**: None
+**Description**: Real-time monitoring of project state and file generation status
+
+**Status Information**:
+
+- Project directory paths
+- Generated file status (HTML, CSS, JS, static content)
+- File existence validation
+- Recommended next steps based on current state
+
+#### `show_module_info()`
+
+**Purpose**: Display comprehensive information about all available modules
+**Parameters**: None
+**Returns**: None
+**Description**: Built-in documentation system with module descriptions and features
+
+**Module Information Includes**:
+
+- Module descriptions and main functions
+- Feature lists and capabilities
+- Usage examples and integration points
+
+---
+
+## Specialized Module APIs
+
+### Country Configuration: `country_config.py` (132 lines)
+
+#### `configure_template()`
+
+**Purpose**: Interactive country selection and content localization
+**Parameters**: None
+**Returns**: None
+**Description**: Handles country selection and copies country-specific content
+
+**Supported Countries**: Denmark, France, Portugal, UK-IR
 
 **File Operations**:
 
 - Source: `master/footer/{country}/` → Destination: `web-folder/static/footer/`
 - Source: `master/offers/{country}/` → Destination: `web-folder/static/offers/`
 
-## Component Variants and Theming
+**Process Flow**:
 
-### Available Header Variants
+1. Display numbered country list (1-4)
+2. Validate user selection
+3. Copy footer content with cleanup
+4. Copy offers content with cleanup
+5. Report operation status
 
-1. **Modern**: Gradient design with diamond logo and smooth animations
+#### `get_available_countries()`
 
-   - Files: `modern.html`, `modern.css`, `modern.js`
-   - Features: Diamond spin animation, balance display, gradient backgrounds
+**Purpose**: Return list of supported countries
+**Parameters**: None
+**Returns**: List[str] - ["Denmark", "France", "Portugal", "UK-IR"]
 
-2. **Luxury**: Royal black & gold theme with crown logo and shimmer effects
+#### `validate_country_support(country: str)`
 
-   - Files: `luxury.html`, `luxury.css`, `luxury.js`
-   - Features: Crown floating animation, shimmer effects, VIP styling
+**Purpose**: Validate if country is supported
+**Parameters**: `country` (str) - Country name to check
+**Returns**: bool - True if supported, False otherwise
 
-3. **Neon**: Cyberpunk style with neon glows and scanning effects
+### Component Import: `component_importer.py` (1258 lines)
 
-   - Files: `neon.html`, `neon.css`, `neon.js`
-   - Features: Neon glow effects, scanning animations, color-coded navigation
+#### `import_components()`
 
-4. **Minimal**: Clean, elegant design with subtle typography
+**Purpose**: Main entry point for the enhanced Mix-and-Match component system with external templates
+**Parameters**: None
+**Returns**: None
+**Description**: Interactive component generation with custom theming, intelligent mixing, and external template system
 
-   - Files: `minimal.html`, `minimal.css`, `minimal.js`
-   - Features: Clean styling, dark theme support, subtle animations
+**Core Features**:
 
-5. **Vintage**: Classic 1924 casino theme with playing card suits
-   - Files: `vintage.html`, `vintage.css`, `vintage.js`
-   - Features: Card flip animations, retro patterns, vintage styling
+- **🎨 Custom Theme Generation**: Generate themes from any hex color with light/dark mode
+- **🎲 Mix-and-Match System**: Smart, Wild, and Single random component combinations
+- **🔧 JSON Configuration**: Structured component definitions with validation
+- **✨ Advanced Color Science**: HSL manipulation, triadic colors, contrast validation
+- **📋 External Templates**: Separated HTML, CSS, and JavaScript template system
 
-### Theme System
+**Process Flow**:
 
-**Theme Files Location**: `themes/` directory
+1. **Template Validation**: Validates all base templates exist in `base/` directory
+2. **Structure Validation**: Validates component structure and creates if missing
+3. **Component Discovery**: Scans `web-components-v2/` for available components
+4. **User Selection**: Interactive component selection with presets
+5. **Mixing Mode**: Choose between Single Random, Smart Mix, or Wild Mix
+6. **Custom Theme**: Generate theme from any hex color with light/dark mode
+7. **Component Assembly**: Process and combine selected components with external templates
+8. **Website Generation**: Create complete responsive casino website using template system
 
-**Available Themes**:
+#### ComponentImporter Class
 
-- `casino-modern.json` - Modern theme with gold accents
-- `casino-luxury.json` - Luxury gold and black theme
-- `casino-neon.json` - Vibrant neon gaming theme
+**Constructor**: `ComponentImporter()`
 
-**Theme Structure**:
+**Properties**:
 
-```json
+- `current_dir`: Path to project root directory
+- `components_dir`: Path to `web-components-v2/` directory
+- `web_folder`: Path to `web-folder/` output directory
+- `themes_dir`: Path to `themes/` directory
+- `base_dir`: Path to `base/` external templates directory (NEW)
+- `custom_theme`: Generated theme dictionary
+- `component_order`: Processing order for components
+- `theme_compatibility`: Theme compatibility matrix for Smart Mix
+
+#### Template System Methods (NEW)
+
+##### `load_template(template_path: str) -> str`
+
+**Purpose**: Load template content from base directory
+**Parameters**:
+
+- `template_path` (str): Relative path to template file within `base/` directory
+  **Returns**: str - Template content as string
+  **Raises**: Prints warning if template not found
+  **Description**: Safely loads external template files with error handling
+
+**Usage Examples**:
+
+```python
+importer = ComponentImporter()
+
+# Load HTML template
+html_content = importer.load_template("templates/index.html")
+
+# Load CSS template
+css_template = importer.load_template("css/theme-variables.css")
+
+# Load JavaScript template
+js_content = importer.load_template("js/main.js")
+```
+
+##### `validate_base_templates() -> bool`
+
+**Purpose**: Validate that all required base templates exist
+**Parameters**: None
+**Returns**: bool - True if all templates exist, False otherwise
+**Description**: Checks for existence of all required template files before processing
+
+**Required Templates**:
+
+- `templates/index.html`
+- `css/base-styles.css`
+- `css/theme-variables.css`
+- `css/fallback-theme.css`
+- `js/main.js`
+
+**Usage**:
+
+```python
+importer = ComponentImporter()
+if importer.validate_base_templates():
+    print("✅ All templates found")
+    # Proceed with generation
+else:
+    print("❌ Missing templates")
+    # Handle missing templates
+```
+
+##### `generate_theme_css(theme: Dict[str, Any]) -> str`
+
+**Purpose**: Generate CSS content with theme variables from template
+**Parameters**:
+
+- `theme` (Dict[str, Any]): Theme dictionary containing colors, typography, spacing, etc.
+  **Returns**: str - Complete CSS content with theme variables replaced
+  **Description**: Takes theme variable template and replaces placeholders with actual theme values
+
+**Template Placeholders Replaced**:
+
+- `{THEME_MODE}`: Theme mode (Light/Dark)
+- `{COLOR_PRIMARY}`: Primary color hex value
+- `{COLOR_PRIMARY_RGB}`: Primary color RGB values
+- `{COLOR_SECONDARY}`: Secondary color hex value
+- `{COLOR_ACCENT}`: Accent color hex value
+- `{COLOR_BACKGROUND}`: Background color hex value
+- `{COLOR_SURFACE}`: Surface color hex value
+- `{COLOR_SURFACE_ELEVATED}`: Elevated surface color hex value
+- `{COLOR_TEXT}`: Primary text color hex value
+- `{COLOR_TEXT_SECONDARY}`: Secondary text color hex value
+- `{COLOR_BORDER}`: Border color hex value
+- `{COLOR_HOVER}`: Hover state color hex value
+- `{COLOR_ACTIVE}`: Active state color hex value
+- `{COLOR_FOCUS}`: Focus state color hex value
+- `{COLOR_SUCCESS}`: Success color hex value
+- `{COLOR_WARNING}`: Warning color hex value
+- `{COLOR_ERROR}`: Error color hex value
+- `{COLOR_GOLD}`: Casino gold color hex value
+- `{COLOR_SILVER}`: Casino silver color hex value
+- `{COLOR_BRONZE}`: Casino bronze color hex value
+- `{FONT_PRIMARY}`: Primary font family
+- `{FONT_DISPLAY}`: Display font family
+- `{SPACING_BASE}`: Base spacing unit
+- `{BORDER_RADIUS}`: Border radius value
+- `{BORDER_WIDTH}`: Border width value
+- `{SHADOW_SMALL}`: Small shadow definition
+- `{SHADOW_MEDIUM}`: Medium shadow definition
+- `{SHADOW_LARGE}`: Large shadow definition
+
+**Usage**:
+
+```python
+importer = ComponentImporter()
+custom_theme = importer.generate_custom_theme("#ff6b35", "dark")
+css_content = importer.generate_theme_css(custom_theme)
+```
+
+#### Core Component Methods
+
+### Image Management: `image_downloader.py` (323 lines)
+
+#### `download_images()`
+
+**Purpose**: Main image management system with multiple download options
+**Parameters**: None
+**Returns**: None
+**Description**: Interactive menu for image download and organization
+
+**Available Options**:
+
+1. **Download from Unsplash**: Casino-themed images (planned)
+2. **Generate with AI**: Custom graphics with OpenAI API (planned)
+3. **Download Casino Stock**: Curated collections (planned)
+4. **Process Existing**: Optimize existing images (planned)
+
+#### `get_image_categories()`
+
+**Purpose**: Get categorized image requirements for casino websites
+**Parameters**: None
+**Returns**: Dict[str, List[str]] - Categories mapped to specific image types
+
+**Image Categories**:
+
+```python
 {
-  "name": "casino-modern",
-  "description": "Modern casino theme with gold accents",
-  "colors": {
-    "primary": "#d4af37",
-    "secondary": "#1a1a1a",
-    "accent": "#ff6b35",
-    "background": "#0f0f0f",
-    "surface": "#1e1e1e",
-    "text": "#ffffff",
-    "text-secondary": "#b0b0b0"
-  },
-  "typography": {
-    "font-primary": "Inter, system-ui, sans-serif",
-    "font-display": "Poppins, sans-serif",
-    "scale": 1.2
-  },
-  "spacing": {
-    "base": "1rem",
-    "scale": 1.5
-  },
-  "borders": {
-    "radius": "8px",
-    "width": "1px"
-  }
+    "header": ["casino logo", "luxury casino background"],
+    "hero": ["casino banner", "jackpot winner", "poker table"],
+    "games": ["poker cards", "roulette wheel", "slot machine"],
+    "promotions": ["casino bonus", "golden coins", "jackpot"],
+    "footer": ["casino decoration", "luxury pattern"]
 }
 ```
 
-## File System Operations
+### Error Validation: `error_checker.py` (600 lines)
 
-### Component File Management
+#### `error_checking()`
+
+**Purpose**: Comprehensive website validation and compliance checking
+**Parameters**: None
+**Returns**: None
+**Description**: Performs multiple validation checks and displays detailed results
+
+**Validation Categories**:
+
+- **Empty Links**: Find '#' links and broken references
+- **CSS Files**: Validate file existence and references
+- **Meta Tags**: Check required HTML meta tags
+- **Logos/Favicons**: Asset presence validation
+- **HTML/CSS/JS Syntax**: Basic syntax validation
+- **Casino Compliance**: Industry-specific requirements
+- **Responsive Design**: Mobile compatibility checks
+
+**Casino Compliance Checks**:
+
+- Age verification (18+ notices)
+- Responsible gambling links (BeGambleAware.org)
+- Legal notices and disclaimers
+- Terms & conditions links
+
+### Cleanup & Optimization: `cleanup_manager.py` (584 lines)
+
+#### `cleanup()`
+
+**Purpose**: Website optimization and production build system
+**Parameters**: None
+**Returns**: None
+**Description**: Interactive menu for cleanup and optimization options
+
+**Optimization Levels**:
+
+1. **Basic Cleanup**: Remove temp files, empty directories, cache files, duplicates
+2. **Full Optimization**: Minify CSS/JS, optimize images, compress files
+3. **Production Build**: Create deployment packages in `dist/`
+4. **Clean Everything**: Reset to initial state (with confirmation)
+
+**Production Build Features**:
+
+- Combined and minified assets
+- Optimized file structure
+- Deployment-ready packages
+- Sitemap and robots.txt generation
+
+### Image Processing: `img_processor.py` (552 lines)
+
+#### `process_images()`
+
+**Purpose**: Advanced image processing and optimization system
+**Parameters**: None
+**Returns**: None
+**Description**: Interactive menu for image processing operations
+
+**Processing Options**:
+
+1. **Resize Images**: Standard casino website dimensions
+2. **Optimize File Sizes**: Compression without quality loss
+3. **Convert Formats**: WebP, AVIF for modern browsers
+4. **Generate Responsive Sets**: Multiple sizes for different devices
+5. **Fix Image Issues**: Validate and fix image problems
+6. **Batch Process All**: Complete image processing workflow
+
+**Standard Image Dimensions**:
 
 ```python
-# Load component configuration
-config_file = component_dir / "component.json"
-with open(config_file, 'r', encoding='utf-8') as f:
-    config = json.load(f)
-
-# Load component files
-html_file = component_dir / f"{variant_name}.html"
-css_file = component_dir / f"{variant_name}.css"
-js_file = component_dir / f"{variant_name}.js"
-
-# Read file contents
-with open(html_file, 'r', encoding='utf-8') as f:
-    html_content = f.read()
+{
+    "hero_banner": (1920, 800),
+    "header_logo": (200, 60),
+    "game_thumbnail": (300, 200),
+    "promotional_banner": (800, 400),
+    "footer_decoration": (100, 50)
+}
 ```
 
-### Directory Structure Operations
+---
+
+## Entry Point System
+
+### `starter.py` - Smart Launcher
+
+**Purpose**: Simple, reliable entry point with comprehensive error handling
+**Functionality**: Redirects to main_controller with fallback guidance
 
 ```python
-# Create enhanced structure
-components_dir.mkdir(exist_ok=True)
-themes_dir.mkdir(exist_ok=True)
-
-# Setup web folder
-web_folder.mkdir(exist_ok=True)
-(web_folder / "css").mkdir(exist_ok=True)
-(web_folder / "js").mkdir(exist_ok=True)
-(web_folder / "assets").mkdir(exist_ok=True)
+def main():
+    try:
+        from main_controller import main as main_controller
+        main_controller()
+    except ImportError as e:
+        # Display helpful error message with module troubleshooting
+        # List required modules and provide fix suggestions
 ```
 
-## Migration Notes
+**Error Handling Features**:
 
-### Key Changes from Old System
+- Lists all required modules
+- Provides troubleshooting steps
+- Suggests alternative execution methods
+- Maintains user-friendly experience
 
-1. **Template Extraction Removed**: No longer uses regex to extract templates from component files
-2. **Real Files**: Components are actual HTML/CSS/JS files instead of embedded strings
-3. **JSON Configuration**: Component metadata stored in structured JSON files
-4. **Enhanced Theming**: Professional animations and modern CSS techniques
-5. **Modular Architecture**: Split into specialized modules for better maintainability
+---
 
-### Deprecated Functions
+## Command Line Interface
 
-The following functions from the old system have been removed:
+### Main Controller Commands
 
-- `extract_templates()` - No longer needed with real component files
-- `extract_template_name()` - Component names from JSON configuration
-- `parse_html()` - Direct HTML file reading
-- Template regex patterns - Replaced with file system operations
+```bash
+# Interactive modes
+python starter.py                                    # Primary entry point
+python scripts-folder/main_controller.py            # Direct access
 
-### Modern Replacements
+# Direct workflow commands
+python scripts-folder/main_controller.py workflow   # Full automated workflow
+python scripts-folder/main_controller.py quick      # Quick development build
+python scripts-folder/main_controller.py status     # Project status monitoring
 
-- **Template Strings** → **Real HTML/CSS/JS Files**
-- **Regex Extraction** → **JSON Configuration + File Reading**
-- **Hardcoded Variants** → **Flexible JSON-Defined Variants**
-- **String Templates** → **Professional Component Files with Animations**
+# Individual module commands
+python scripts-folder/main_controller.py country    # Country configuration
+python scripts-folder/main_controller.py components # Component import
+python scripts-folder/main_controller.py images     # Image management
+python scripts-folder/main_controller.py check      # Error validation
+python scripts-folder/main_controller.py cleanup    # Cleanup & optimization
+```
 
-This enhanced API provides a robust, maintainable, and scalable foundation for generating professional casino websites with modern web technologies and beautiful designs.
+### Individual Module Execution
+
+```bash
+# Direct module execution
+python scripts-folder/country_config.py      # Country configuration only
+python scripts-folder/component_importer.py  # Component import only
+python scripts-folder/error_checker.py       # Error checking only
+python scripts-folder/cleanup_manager.py     # Cleanup only
+```
+
+---
+
+## Advanced Integration
+
+### Programmatic Usage
+
+```python
+# Import main controller functions
+from scripts_folder.main_controller import run_full_workflow, quick_build
+
+# Execute complete workflows
+run_full_workflow()        # Full automated generation
+quick_build()             # Development build
+
+# Import individual modules
+from scripts_folder.country_config import configure_template
+from scripts_folder.component_importer import import_components
+from scripts_folder.error_checker import error_checking
+
+# Execute specific functions
+configure_template()      # Configure country
+import_components()       # Import components
+error_checking()         # Validate website
+```
+
+### Custom Workflow Creation
+
+```python
+def custom_casino_workflow():
+    """Create custom workflow for specific requirements."""
+    from scripts_folder.country_config import configure_template
+    from scripts_folder.component_importer import import_components
+    from scripts_folder.cleanup_manager import basic_cleanup
+
+    print("🎰 Starting custom casino workflow...")
+
+    # Essential steps only
+    configure_template()
+    import_components()
+    basic_cleanup()
+
+    print("✅ Custom workflow completed!")
+```
+
+---
+
+**🎯 Production API**: This comprehensive API provides full programmatic access to the Casino Website Generator's modular architecture, enabling both interactive use and advanced automation for professional casino website development.

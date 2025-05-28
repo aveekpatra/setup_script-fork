@@ -1,0 +1,345 @@
+/* Luxury Footer Component */
+.luxury-footer {
+  background: linear-gradient(
+    135deg,
+    var(--color-surface) 0%,
+    var(--color-surface-elevated) 100%
+  );
+  border-top: 2px solid var(--color-gold);
+  margin-top: auto;
+  position: relative;
+}
+
+.luxury-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* VIP Contact Section */
+.luxury-footer .footer-vip {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  background: rgba(255, 215, 0, 0.03);
+}
+
+.luxury-footer .vip-contact {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.luxury-footer .vip-icon {
+  font-size: 3rem;
+  color: var(--color-gold);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  animation: crown-glow 3s ease-in-out infinite alternate;
+}
+
+.luxury-footer .vip-content {
+  flex: 1;
+}
+
+.luxury-footer .vip-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.luxury-footer .vip-subtitle {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.luxury-footer .vip-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-gold), #b8860b);
+  color: var(--color-background);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-medium);
+}
+
+.luxury-footer .vip-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large), 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Main Footer Content */
+.luxury-footer .footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Brand Section */
+.luxury-footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.luxury-footer .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.luxury-footer .logo-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.luxury-footer .logo-text {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.luxury-footer .logo-crown {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.luxury-footer .brand-description {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 320px;
+  font-style: italic;
+}
+
+.luxury-footer .awards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.luxury-footer .award-item {
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+/* Footer Links */
+.luxury-footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.luxury-footer .link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.luxury-footer .section-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.luxury-footer .link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.luxury-footer .footer-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: inline-block;
+  position: relative;
+}
+
+.luxury-footer .footer-link::before {
+  content: "✦";
+  position: absolute;
+  left: -15px;
+  color: var(--color-gold);
+  opacity: 0;
+  transition: var(--transition);
+  font-size: 0.8rem;
+}
+
+.luxury-footer .footer-link:hover {
+  color: var(--color-gold);
+  transform: translateX(8px);
+}
+
+.luxury-footer .footer-link:hover::before {
+  opacity: 1;
+}
+
+/* Footer Bottom */
+.luxury-footer .footer-bottom {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  background: rgba(255, 215, 0, 0.02);
+}
+
+.luxury-footer .footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.luxury-footer .legal-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.luxury-footer .legal-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.luxury-footer .legal-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.luxury-footer .legal-link:hover {
+  color: var(--color-gold);
+}
+
+.luxury-footer .legal-link:hover::after {
+  width: 100%;
+}
+
+.luxury-footer .compliance-text {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-width: 700px;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes crown-glow {
+  0% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.8),
+      0 0 40px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .luxury-footer .footer-vip {
+    padding: 1.5rem 0;
+  }
+
+  .luxury-footer .vip-contact {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .luxury-footer .vip-icon {
+    font-size: 2.5rem;
+  }
+
+  .luxury-footer .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+  }
+
+  .luxury-footer .footer-brand {
+    text-align: center;
+  }
+
+  .luxury-footer .brand-description {
+    max-width: none;
+  }
+
+  .luxury-footer .footer-links {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .luxury-footer .link-section {
+    text-align: center;
+  }
+
+  .luxury-footer .legal-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-footer .footer-main {
+    padding: 1.5rem 0;
+  }
+
+  .luxury-footer .footer-bottom {
+    padding: 1rem 0;
+  }
+
+  .luxury-footer .brand-logo {
+    justify-content: center;
+  }
+
+  .luxury-footer .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .luxury-footer .vip-title {
+    font-size: 1.25rem;
+  }
+
+  .luxury-footer .vip-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
